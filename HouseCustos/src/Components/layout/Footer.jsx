@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 function Footer() {
     return (
         <>
-            <div className="footer">
+            <footer>
                 <div className="main_footer">
                     <ul className="midias_list">
                         <li>
@@ -22,7 +22,7 @@ function Footer() {
                             House Custos &copy; 2023
                         </span>
                 </div>
-            </div>
+            </footer>
         </>
     )
 }

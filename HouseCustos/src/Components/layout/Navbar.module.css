@@ -72,10 +72,18 @@ scale: 0.5;
     width: 100%;
   }
  .links{
-  margin-left: 45px;
+  margin-left: 20px;
  }
  .li{
   margin-left: -3px;
  }
- 
+ .logo{
+  max-width: 90px;
+  padding: 0px;
+  margin-left: 0px;
+scale: 0.5;
+}
+.navbar{
+  height: 100px;
+}
 }

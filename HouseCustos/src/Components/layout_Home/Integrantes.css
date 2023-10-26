@@ -66,3 +66,23 @@
     margin-top: -100px;
   }
 }
+@media screen and (max-width: 375px){
+  #h2{
+    margin-top: 20px;
+  }
+  .carrousel{
+    margin-top: 30px;
+    scale: 0.9;
+  }
+  h2{
+    margin-top: -40px;
+    margin-bottom: -140px;
+    
+  }
+  .ocupation{
+    margin-top: 20px;
+  }
+  .review{
+    margin-top: -100px;
+  }
+}
