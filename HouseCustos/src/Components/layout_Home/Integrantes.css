@@ -18,6 +18,7 @@
  .ocupation{
   color: #fff;
   font-size: 25px;
+  margin-top: -40px;
   margin-bottom: -10px;
   padding: 0 auto;
 }
@@ -25,7 +26,7 @@
   color: #f2f2f2;
   max-width: 40rem;
   margin: 0 auto;
- margin-top: -50px;
+ margin-top: -100px;
  padding: 0 auto;
 
 }
@@ -45,6 +46,10 @@
   text-align: center;
   color: var(--cor-orangebase);
 }
+h2{
+ margin-bottom: -100px;
+ margin-top: -50px;
+}
 
 @media screen and (max-width:320px) {
   #h2{
@@ -60,13 +65,13 @@
     
   }
   .ocupation{
-    margin-top: 20px;
+    margin-top: 30px;
   }
   .review{
     margin-top: -100px;
   }
 }
-@media screen and (max-width: 375px){
+@media (min-width:321px) and (max-width: 375px){
   #h2{
     margin-top: 20px;
   }
@@ -80,9 +85,91 @@
     
   }
   .ocupation{
-    margin-top: 20px;
+    margin-top: 30px;
   }
   .review{
     margin-top: -100px;
+  }
+}
+@media (min-width:376px) and (max-width:425px) {
+  #h2{
+    margin-top: 20px;
+  }
+  .carrousel{
+    margin-top: 30px;
+    scale: 0.9;
+  }
+  h2{
+    margin-top: -40px;
+    margin-bottom: -140px;
+    
+  }
+  .ocupation{
+    margin-top: 30px;
+  }
+  .review{
+    margin-top: -100px;
+  }
+}
+@media (min-width:426px) and (max-width:768px) {
+  #h2{
+    margin-top: 20px;
+  }
+  .carrousel{
+    margin-top: 30px;
+    scale: 0.9;
+  }
+  h2{
+    margin-top: -40px;
+    margin-bottom: -140px;
+    
+  }
+  .ocupation{
+    margin-top: 30px;
+  }
+  .review{
+    margin-top: -100px;
+  }
+}
+@media (min-width:376px) and (max-width:425px) {
+  #h2{
+    margin-top: 20px;
+  }
+  .carrousel{
+    margin-top: 30px;
+    scale: 0.9;
+  }
+  h2{
+    margin-top: -40px;
+    margin-bottom: -140px;
+    
+  }
+  .ocupation{
+    margin-top: 40px;
+  }
+  .review{
+    margin-top: -100px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  #h2{
+    margin-top: 20px;
+  }
+  .carrousel{
+    margin-top: 30px;
+    scale: 0.9;
+  }
+  h2{
+    margin-top: -40px;
+    margin-bottom: -140px;
+    font-size: 30px;
+  }
+  .ocupation{
+    margin-top: 40px;
+    font-size: 25px;
+  }
+  .review{
+    margin-top: -100px;
+    font-size: 19px;
   }
 }
