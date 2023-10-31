@@ -21,7 +21,7 @@ box-shadow:  15px 15px 39px #5a5a5a,
         margin-left: 20px;
     }
 }
-@media screen and (max-width:375px) {
+@media (min-width:321px)and (max-width:375px) {
     .chart_pie{
         display: flex;
         justify-content: center;
@@ -30,5 +30,16 @@ box-shadow:  15px 15px 39px #5a5a5a,
         height: 210px;
        margin-top: 26px;
        margin-left: 60px;
+    }
+}
+@media (min-width:376px)and (max-width:425px) {
+    .chart_pie{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        height: 210px;
+       margin-top: 30px;
+       margin-left: 40px;
     }
 }

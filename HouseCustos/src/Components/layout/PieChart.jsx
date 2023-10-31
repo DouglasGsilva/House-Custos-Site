@@ -32,6 +32,13 @@ const MobileMid = {
   title: "% DE VALOR DAS CONTAS",
   is3D: true
 }
+const MobileG = {
+  width: 276,
+  height: 200,
+  title: "% DE VALOR DAS CONTAS",
+  is3D: true
+}
+
 
 function Mobilefirst() {
   const smallScreen = useMediaQuery({
@@ -40,10 +47,15 @@ function Mobilefirst() {
   const middleScreen = useMediaQuery({
     query: "(min-width:321px) and (max-width: 375px)"
   })
+  const grandScreen = useMediaQuery({
+    query: "(min-width:376px) and (max-width: 425px)"
+  })
   if (smallScreen === true) {
     return MobileS
   } if (middleScreen === true) {
     return MobileMid
+  }if(grandScreen == true){
+return MobileG
   } else {
     return options
   }

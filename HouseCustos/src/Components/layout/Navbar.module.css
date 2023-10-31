@@ -49,7 +49,7 @@ li a:hover{
   scale: 0.8;
 }
 
-@media screen and (max-width: 320px) {
+@media(max-width: 320px) {
   .logo{
     max-width: 90px;
     padding: 0px;
@@ -61,6 +61,7 @@ scale: 0.5;
     padding: 0px;
   }
   .li{
+    font-size: 16px;
     margin-right: 20px;
   }
   .navbar{
@@ -77,6 +78,7 @@ scale: 0.5;
  }
  .li{
   margin-left: -3px;
+  font-size: 16px;
  }
  .logo{
   max-width: 90px;
@@ -94,7 +96,8 @@ scale: 0.5;
     margin-left: -5px;
   }
   .links{
-    margin-left: 10px;
+    
+    font-size: 16px;
   }
   .navbar{
     height: 110px;

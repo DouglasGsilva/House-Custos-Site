@@ -14,7 +14,7 @@ function App() {
     <>
       <BrowserRouter>
     <NavBar/>
-    <Routes>
+    <Routes patch="/">
       <Route path="/" element={<Home/>}/>
       <Route path='/custos' element={<Custos/>}/>
     </Routes>

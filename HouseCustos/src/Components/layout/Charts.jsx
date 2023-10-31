@@ -30,7 +30,7 @@ const MobileM = {
   legend: { position: "right" },
   isStacked: true,
 }
-const MobileLar = {
+const MobileG = {
   width: 340,
   height: 200,
   chartArea: { width: "50%" },
@@ -81,21 +81,22 @@ function Charts({ submitData, confirmPressed }) {
 
   function Mobilefirst() {
     const smallScreen = useMediaQuery({
-      query: "screen and (max-width: 320px)"
+      query: " (max-width: 320px)"
     })
     const middleScreen = useMediaQuery({
-      query: " screen and (max-width:375px)"
+      query: " (min-width:321px) and (max-width:375px)"
     })
-    const LargeScreen = useMediaQuery({
-      query: " screen and (max-width:425px)"
+    const GrandScreen = useMediaQuery({
+      query: " (min-width:376px) and (max-width:425px)"
     })
+    
 
     if (smallScreen === true) {
       return MobileS
     } if (middleScreen === true) {
       return MobileM
-    } if (LargeScreen === true) {
-      return MobileLar
+    } if (GrandScreen === true) {
+      return MobileG
     } else {
       return options
     }
