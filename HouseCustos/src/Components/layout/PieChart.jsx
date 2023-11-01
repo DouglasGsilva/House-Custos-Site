@@ -14,7 +14,7 @@ const data = [
 ]
 
 const options = {
-  width: 300,
+  width: 320,
   height: 300,
   title: "% DE VALOR DAS CONTAS",
   is3D: true
@@ -38,6 +38,12 @@ const MobileG = {
   title: "% DE VALOR DAS CONTAS",
   is3D: true
 }
+const Tablet = {
+  width: 376,
+  height: 290,
+  title: "% DE VALOR DAS CONTAS",
+  is3D: true
+}
 
 
 function Mobilefirst() {
@@ -50,12 +56,17 @@ function Mobilefirst() {
   const grandScreen = useMediaQuery({
     query: "(min-width:376px) and (max-width: 425px)"
   })
+  const TabletScreen = useMediaQuery({
+    query: "(min-width:426px) and (max-width: 768px)"
+  })
   if (smallScreen === true) {
     return MobileS
   } if (middleScreen === true) {
     return MobileMid
   }if(grandScreen == true){
 return MobileG
+  }if(TabletScreen == true){
+return Tablet
   } else {
     return options
   }

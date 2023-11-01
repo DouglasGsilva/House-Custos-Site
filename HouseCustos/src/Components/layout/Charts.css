@@ -1,7 +1,7 @@
 .grafico{
 align-content: center;
 justify-content: center;
-width: 850px;
+width: 838px;
 height: 380px;
 background-color:#adadad;
 border-radius: 23px;
@@ -34,4 +34,9 @@ margin-left: 25px;
         width: 355px;
         height: 250px;
     }
+}
+@media (min-width:426px) and (max-width:768px){
+.grafico{
+    width: 690px;
+}
 }

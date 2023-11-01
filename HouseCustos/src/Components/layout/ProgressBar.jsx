@@ -7,7 +7,7 @@ function ProgressBar({ percent }) {
     return (
         <>
             <div className='bar'>
-                <Progress percent={percent} size={'small'} />
+                <Progress percent={percent} size={'small'} showInfo={false}/>
             </div>
         </>
     )

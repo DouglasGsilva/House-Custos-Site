@@ -20,6 +20,7 @@ function Custos() {
 
   // aqui fica o codigo referente a barra de progresso que vai aumentando de acordo com o preenchimento das boxes//
   const updateProgress = () => {
+    
     const totalPercentage = (filledBoxes / 3) * 50;
     return totalPercentage <= 100 ? totalPercentage : 100;
   };
@@ -84,7 +85,7 @@ function Custos() {
         </div>
 
         <div className="progress-bar">
-          <ProgressBar percent={updateProgress()} />
+          <ProgressBar percent={updateProgress()}/>
         </div>
         <div className="box">
           <BoxConta id={"1"} name={"Conta de Água"} onFill={(value) => handleBoxFill("1", "Conta de Água", value)} />

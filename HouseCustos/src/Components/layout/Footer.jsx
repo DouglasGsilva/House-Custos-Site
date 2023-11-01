@@ -12,14 +12,14 @@ function Footer() {
                             <GithubOutlined /> Github <Link to={"https://github.com/sDouglasgonc"}>  </Link>
                         </li>
                         <li>
-                            <FacebookOutlined /> Facebook  <Link to={"https://www.facebook.com/profile.php?id=100005975162268"}>  </Link>
+                    <FacebookOutlined />Facebook<Link to={"https://www.facebook.com/profile.php?id=100005975162268"}>  </Link>
                         </li>
                         <li>
                             <LinkedinOutlined /> Linkedn  <Link to={"https://www.linkedin.com/in/douglas-silva-894065233/"}> </Link>
                         </li>
-                        <span>
+                        <div className="span">
                             House Custos &copy; 2023
-                        </span>
+                        </div>
                     </ul>
                         
                 </div>

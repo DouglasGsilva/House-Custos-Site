@@ -18,7 +18,7 @@
    padding: 0px;
 }
 .chart-bar{
-   width: 70%;
+   width: 60%;
    padding-left: 10px;
 }
 .progress-bar{
@@ -65,7 +65,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-left: -8px;
+      margin-left: -30px;
    }
    .bt{
       margin-bottom: 20px;
@@ -93,6 +93,9 @@
    }
 }
 @media (min-width:376px) and (max-width:425px) {
+   .chart-bar{
+      width: 100%;
+   }
    .box{
       width: 100%;
       display: flex;
@@ -102,5 +105,23 @@
    }
    .container{
       height: 100%;
+   }
+}
+@media (min-width:426px) and (max-width:768px) {
+   .chart-bar{
+      width: 100%;
+   }
+.box{
+   width: 33%;
+   margin-left: 2px;
+}
+.container{
+   height: 100%;
+}
+
+}
+@media (min-width:769px) and (max-width:1024px) {
+   .chart-bar{
+width: 100%;
    }
 }
