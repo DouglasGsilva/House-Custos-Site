@@ -19,7 +19,9 @@ function App() {
       <Route path='/custos' element={<Custos/>}/>
     </Routes>
 <Footer/>
+
     </BrowserRouter>
+    
     </>
   )
 }

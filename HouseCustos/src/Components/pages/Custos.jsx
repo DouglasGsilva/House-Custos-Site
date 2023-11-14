@@ -82,6 +82,7 @@ function Custos() {
         </div>
         <div className="chart-pie">
           <Pie />
+
         </div>
 
         <div className="progress-bar">
@@ -105,8 +106,6 @@ function Custos() {
         <div className="box ">
           <BoxConta id={"6"} name={"Conta da Previdencia Social"} onFill={(value) => handleBoxFill("6", "Conta da Previdencia Social", value)} />
         </div>
-
-
         <div className="bt">
           {allboxesFilled && (<ButtonMain onStartClick={handleStartButtonClick} />)}
         </div>
