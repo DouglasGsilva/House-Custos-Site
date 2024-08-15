@@ -1,0 +1,37 @@
+.bar{
+    width: 600px;
+   
+}
+
+@media screen and (max-width: 320px) {
+    .bar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+        width: 250px;
+    }
+}
+@media (min-width:321px) and (max-width:375px) {
+    .bar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 250px;
+        margin-top: 100px;
+        margin-left: -10px;
+    }
+}
+@media (min-width:376px) and (max-width:425px) {
+    .bar{
+        width: 250px;
+        margin-top: 100px;
+        margin-left: -10px;
+    }
+}
+@media (min-width:426px) and (max-width:768px) {
+    .bar{
+        margin-top:100px;
+        margin-bottom: 20px;
+    }
+}
