@@ -14,9 +14,9 @@
 .First-content {
   display: flex;
   justify-content: end;
-  align-items: end;
-  margin-right: 270px;
+  align-items: end; 
   padding: 5px 5px 5px;
+flex-direction: row;
 }
 .Second-content {
   display: flex;
@@ -39,6 +39,7 @@
   display: flex;
   justify-content: space-around;
   border-radius: 100px;
+ 
 }
 .img {
   display: flex;
@@ -64,6 +65,29 @@
 }
 .content-total {
   display: flex;
+  background-color: black;
+}
+.content-first {
+  display: flex;
+transform: translateX(-100%);
+position: relative;
+right: 250px;
+transition: all 0.2s linear;
+opacity: 0;
+}
+.content-second {
+  display: flex;
+transform: translateX(100%);
+transition: all 0.2s linear;
+opacity: 0;
+}
+.content-third {
+  display: flex;
+transform: translateX(-100%);
+position: relative;
+right: 180px;
+transition: all 0.2s linear;
+opacity: 0;
 }
 #about {
   display: flex;

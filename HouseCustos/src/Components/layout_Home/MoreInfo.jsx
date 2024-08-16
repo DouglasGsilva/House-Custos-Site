@@ -1,12 +1,50 @@
 import "./MoreInfo.css";
 import imgFile from "../imgs/icone-pasta.png";
 import imgEngine from "../imgs/icone-engine.png";
+import {useLayoutEffect} from "react"
+import {gsap} from "gsap"
+ import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 const MoreInfo = () => {
+
+gsap.registerPlugin(ScrollTrigger)
+useLayoutEffect(()=>{
+  gsap.to(".content-first",{
+x:0,
+opacity:1,
+scrollTrigger:{
+  trigger: ".First-content",
+  start:"top 300px",
+  end:"bottom 500px",
+  scrub:true
+}}),
+gsap.to(".content-second",{
+  x:0,
+  opacity:1,
+  scrollTrigger:{
+    trigger: ".Second-content",
+    start:"top 300px",
+    end:"bottom 400px",
+    scrub:true
+  }}),
+  gsap.to(".content-third",{
+    x:0,
+    opacity:1,
+    scrollTrigger:{
+      trigger: ".Third-content",
+      start:"top 300px",
+      end:"bottom 500px",
+      scrub:true
+    }})
+  
+})
+
+
   return (
     <>
       <div className="area-content">
-        <div className="First-content">
-          <div className="content-total">
+        <section className="First-content">
+          <div className="content-first">
             <div className="content-1">
               <div className="img">
                 <img className="size-img" src={imgFile} alt="" />
@@ -19,9 +57,9 @@ const MoreInfo = () => {
               ea laborum? Consectetur?
             </p>
           </div>
-        </div>
+        </section>
         <div className="Second-content">
-          <div className="content-total">
+          <div className="content-second">
             <div className="content-2">
               <div className="img">
                 <img className="size-img" src={imgEngine} alt="" />
@@ -36,7 +74,7 @@ const MoreInfo = () => {
           </div>
         </div>
         <div className="Third-content">
-          <div className="content-total">
+          <div className="content-third">
             <div className="content-3">
               <div className="img">
                 <img className="size-img" src={imgEngine} alt="" />
