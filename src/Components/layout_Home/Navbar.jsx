@@ -2,24 +2,21 @@ import { Link } from "react-router-dom";
 import "../layout_Home/Navbar.css";
 import logo from "../imgs/em_desenvolvimento.png";
 
-
-function NavBar( {action}) {
-
-
+function NavBar() {
   return (
-    <nav >
-      <div className={`navbar ${action ? "activeColor":""}` } >
-        
-      <Link to={"/"}><img className="logo" src={logo} alt="Em Desenvolvimento"></img></Link>{" "}
+    <nav>
+      <div className="navbar">
+        <img className="logo" src={logo} alt="Em Desenvolvimento"></img>
+
         <ul className="links">
           <li className="li">
-           <button className="btn-Login">Criar Conta</button>
+            <Link to={"/"}>Home</Link>{" "}
           </li>
-          {/* <li className="li">
-            <Link to={"/custos"}>Custos</Link>{" "}
-          </li> */}
           <li className="li">
-            <button className="btn-Entrar">Entrar</button>
+            <Link to={"/custos"}>Custos</Link>{" "}
+          </li>
+          <li className="li">
+            <Link>Sobre</Link>{" "}
           </li>
         </ul>
       </div>

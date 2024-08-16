@@ -24,7 +24,7 @@ gsap.to(".content-second",{
   scrollTrigger:{
     trigger: ".Second-content",
     start:"top 300px",
-    end:"bottom 500px",
+    end:"bottom 400px",
     scrub:true
   }}),
   gsap.to(".content-third",{

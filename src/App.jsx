@@ -4,32 +4,12 @@ import Home from "./Components/pages/Home";
 import NavBar from "./Components/layout_Home/Navbar";
 import Custos from "./Components/pages/Custos";
 import "./index.css";
-import { useEffect, useState } from "react";
 
 function App() {
-
-  const [activeColor, setActiveColor] = useState(false)
-
-useEffect(()=>{
-function scrollPosition(){
-if(window.scrollY > 20){
-setActiveColor(true)
-}else{
-  setActiveColor(false)
-}
-}
-
-window.addEventListener("scroll", scrollPosition)
-
-return () =>{
-  window.addEventListener("scroll", scrollPosition)
-}
-},[])
-
   return (
     <>
       <BrowserRouter>
-        <NavBar action={activeColor}/>
+        <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/custos" element={<Custos />} />
