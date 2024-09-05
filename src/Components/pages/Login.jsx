@@ -1,4 +1,5 @@
-function Login() {
-<h1>feito</h1>
-}
-export default Login
+const Login = () => {
+  return <div>asdasd</div>;
+};
+
+export default Login;
