@@ -10,15 +10,11 @@ function NavBar() {
 
         <ul className='links'>
           <li>
-            <Link className='cadastro' to={"/login"}>
+            <Link className='cadastro' to={"/cadastro"}>
               Cadastre-se
             </Link>{" "}
           </li>
-          <li>
-            <Link className='home' to={"/"}>
-              Home
-            </Link>
-          </li>
+
           <li>
             <Link className='custos' to={"/custos"}>
               Custos

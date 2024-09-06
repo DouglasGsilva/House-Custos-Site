@@ -12,7 +12,7 @@ function Banner() {
           fazer o calculo das despesas, fazendo assim uma administração mais
           concisa.
         </p>
-        <Link className='btn' to='/custos'>
+        <Link className='btn' to='/cadastro'>
           Vamos Checar
         </Link>
       </div>
