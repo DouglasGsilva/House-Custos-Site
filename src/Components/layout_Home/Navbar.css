@@ -47,6 +47,17 @@ li {
 .sobre:hover {
   color: #2e2eb1;
 }
+.btn-sair {
+  color: #ffffff;
+  background-color: #3d3ddd;
+  padding: 4px 8px 4px 8px;
+  border-radius: 4px;
+  transition: all 0.2s linear;
+}
+.btn-sair:hover {
+  color: #3d3ddd;
+  background-color: #ffffff;
+}
 .cadastro {
   color: #3d3ddd;
   background-color: #f2f2f2;

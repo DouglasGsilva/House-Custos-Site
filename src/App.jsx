@@ -6,6 +6,7 @@ import Custos from "./Components/pages/Custos/Custos";
 import "./index.css";
 import Cadastro from "./Components/pages/Cadastro/Cadastro";
 import { AuthProvider } from "./contexts/Auth/AutProvider";
+import { RequireAuth } from "./contexts/Auth/RequireAuth";
 
 function App() {
   return (
@@ -15,7 +16,14 @@ function App() {
           <Fragment>
             <Routes>
               <Route path='/' element={<Home />} />
-              <Route path='/custos' element={<Custos />} />
+              <Route
+                path='/custos'
+                element={
+                  <RequireAuth>
+                    <Custos />
+                  </RequireAuth>
+                }
+              />
               <Route path='/cadastro' element={<Cadastro />} />
             </Routes>
           </Fragment>
