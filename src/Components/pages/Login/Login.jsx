@@ -1,22 +1,5 @@
-import { useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { AuthContext } from "../../../contexts/Auth/AuthContext";
 import "./Login.css";
 export const Login = () => {
-  const auth = useContext(AuthContext);
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const navigate = useNavigate();
-
-  const handleLogin = async () => {
-    if (email && password) {
-      const isLogged = await auth.signIn(email, password);
-      if (isLogged) {
-        console.log("a acão está correta");
-        navigate("/");
-      }
-    }
-  };
   return (
     <div className='container-center'>
       <div className='pape-login'>
