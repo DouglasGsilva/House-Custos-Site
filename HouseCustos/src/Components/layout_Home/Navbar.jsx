@@ -5,18 +5,23 @@ import logo from "../imgs/em_desenvolvimento.png";
 function NavBar() {
   return (
     <nav>
-      <div className="navbar">
-        <img className="logo" src={logo} alt="Em Desenvolvimento"></img>
+      <div className='navbar'>
+        <img className='logo' src={logo} alt='Em Desenvolvimento'></img>
 
-        <ul className="links">
-          <li className="li">
-            <Link to={"/"}>Home</Link>{" "}
+        <ul className='links'>
+          <li>
+            <Link className='cadastro' to={"/cadastro"}>
+              Cadastre-se
+            </Link>{" "}
           </li>
-          <li className="li">
-            <Link to={"/custos"}>Custos</Link>{" "}
+
+          <li>
+            <Link className='custos' to={"/custos"}>
+              Custos
+            </Link>
           </li>
-          <li className="li">
-            <Link>Sobre</Link>{" "}
+          <li>
+            <Link className='sobre'>Sobre</Link>{" "}
           </li>
         </ul>
       </div>

@@ -14,9 +14,9 @@
 .First-content {
   display: flex;
   justify-content: end;
-  align-items: end; 
+  align-items: end;
   padding: 5px 5px 5px;
-flex-direction: row;
+  flex-direction: row;
 }
 .Second-content {
   display: flex;
@@ -39,7 +39,6 @@ flex-direction: row;
   display: flex;
   justify-content: space-around;
   border-radius: 100px;
- 
 }
 .img {
   display: flex;
@@ -69,25 +68,25 @@ flex-direction: row;
 }
 .content-first {
   display: flex;
-transform: translateX(-100%);
-position: relative;
-right: 250px;
-transition: all 0.2s linear;
-opacity: 0;
+  transform: translateX(-100%);
+  position: relative;
+  right: 250px;
+  transition: all 0.2s linear;
+  opacity: 0;
 }
 .content-second {
   display: flex;
-transform: translateX(100%);
-transition: all 0.2s linear;
-opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.2s linear;
+  opacity: 0;
 }
 .content-third {
   display: flex;
-transform: translateX(-100%);
-position: relative;
-right: 180px;
-transition: all 0.2s linear;
-opacity: 0;
+  transform: translateX(-100%);
+  position: relative;
+  right: 180px;
+  transition: all 0.2s linear;
+  opacity: 0;
 }
 #about {
   display: flex;
@@ -96,7 +95,7 @@ opacity: 0;
   margin-left: 10px;
   max-width: 200px;
   max-height: 200px;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .video {
