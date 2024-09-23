@@ -1,4 +1,3 @@
-import "./App.css";
 import { Fragment } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Components/pages/Home/Home";
