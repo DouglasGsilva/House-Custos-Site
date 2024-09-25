@@ -39,6 +39,11 @@
   margin-bottom: -1px;
   margin-right: 140px;
 }
+.placeholder-CP {
+  display: flex;
+  margin-bottom: -1px;
+  margin-right: 110px;
+}
 .btn-cadastrar {
   width: 90px;
   height: 40px;

@@ -2,6 +2,7 @@ import "../Cadastro/Cadastro.css";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import signupSchema from "../../../Schemas/signupSchema";
+import { signup } from "../../../services/userServices";
 
 const Cadastro = () => {
   const {
@@ -12,8 +13,13 @@ const Cadastro = () => {
     resolver: zodResolver(signupSchema),
   });
 
-  function HandleSubmit(data) {
-    console.log(data);
+  async function HandleSubmit(data) {
+    try {
+      const response = await signup(data);
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   return (
@@ -38,7 +44,15 @@ const Cadastro = () => {
         />
 
         {errors.password && <p className='error'>{errors.password.message}</p>}
-
+        <p className='placeholder-CP'>Confirme sua senha:</p>
+        <input
+          type='password'
+          className='input-data'
+          {...register("confirmPassword")}
+        />
+        {errors.confirmPassword && (
+          <p className='error'>{errors.confirmPassword.message}</p>
+        )}
         <button className='btn-cadastrar'>Cadastrar</button>
       </form>
     </div>
