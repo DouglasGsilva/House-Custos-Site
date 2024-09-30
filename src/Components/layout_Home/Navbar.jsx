@@ -10,8 +10,8 @@ function NavBar() {
 
         <ul className='links'>
           <li>
-            <Link className='cadastro' to={"/cadastro"}>
-              Cadastre-se
+            <Link className='login' to={"/login"}>
+              Login
             </Link>{" "}
           </li>
 
@@ -22,6 +22,11 @@ function NavBar() {
           </li>
           <li>
             <Link className='sobre'>Sobre</Link>{" "}
+          </li>
+          <li>
+            <Link className='cadastro' to={"/cadastro"}>
+              Cadastre-se
+            </Link>{" "}
           </li>
         </ul>
       </div>

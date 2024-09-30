@@ -3,6 +3,8 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import signupSchema from "../../../Schemas/signupSchema";
 import { signup } from "../../../services/userServices";
+import Cookies from "js-cookie";
+import { useNavigate } from "react-router-dom";
 
 const Cadastro = () => {
   const {
@@ -13,10 +15,14 @@ const Cadastro = () => {
     resolver: zodResolver(signupSchema),
   });
 
+  const navigate = useNavigate();
+
   async function HandleSubmit(data) {
     try {
       const response = await signup(data);
       console.log(response);
+      Cookies.set("token", response.data.token, { expires: 1 });
+      navigate("/");
     } catch (error) {
       console.log(error);
     }

@@ -11,3 +11,8 @@ export const signup = (data) => {
   const response = axios.post(`${baseURL}/user/create`, body);
   return response;
 };
+
+export const signin = (data) => {
+  const response = axios.post(`${baseURL}/auth/`, data);
+  return response;
+};
