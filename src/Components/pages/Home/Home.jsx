@@ -7,7 +7,6 @@ import NavBar from "../../layout_Home/Navbar.jsx";
 import Cookies from "js-cookie";
 
 function Home() {
-  console.log(Cookies.get("token"));
   return (
     <div className='home_main'>
       <NavBar />
