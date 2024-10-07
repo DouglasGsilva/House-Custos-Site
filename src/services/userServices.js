@@ -24,9 +24,11 @@ export const signin = async (data) => {
 };
 
 export const userLogged = () => {
+  const token = Cookies.get("token");
+  console.log("Token Enviado:", token);
   const response = axios.get(`${baseURL}/user/findById`, {
     headers: {
-      Authorization: `Bearer ${Cookies.get("token")}`,
+      Authorization: `Bearer ${Cookies.get(token)}`,
     },
   });
   return response;
