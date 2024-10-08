@@ -6,7 +6,6 @@ import Footer from "../../layout_Home/Footer.jsx";
 import NavBar from "../../layout_Home/Navbar.jsx";
 import { useEffect } from "react";
 
-
 function Home() {
   useEffect(() => {});
 

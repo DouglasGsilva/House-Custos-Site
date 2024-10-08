@@ -1,6 +1,6 @@
 import axios from "axios";
 import Cookies from "js-cookie";
-// import imgUser from "../Components/imgs/userImg.png";
+
 const baseURL = "http://localhost:3001";
 
 export const signup = (data) => {

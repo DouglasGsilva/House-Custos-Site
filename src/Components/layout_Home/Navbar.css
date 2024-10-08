@@ -15,10 +15,19 @@
   margin-right: 40px;
   background-color: #000000;
 }
+.name {
+  margin-right: 50px;
+  font-size: 20px;
+  text-decoration: none;
+}
+.signout {
+  margin: auto;
+}
 li {
   margin-right: 50px;
   font-size: 20px;
   text-decoration: none;
+  display: flex;
 }
 .li-btn {
   margin-right: 50px;
