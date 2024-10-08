@@ -4,6 +4,7 @@ import logo from "../imgs/em_desenvolvimento.png";
 import { userLogged } from "../../services/userServices";
 import { useEffect } from "react";
 import Cookies from "js-cookie";
+
 function NavBar() {
   const findUserLogged = async () => {
     try {
@@ -15,7 +16,9 @@ function NavBar() {
   };
 
   useEffect(() => {
-    if (Cookies.get("token")) findUserLogged();
+    if (Cookies.get("token")) {
+      findUserLogged();
+    }
   }, []);
 
   return (

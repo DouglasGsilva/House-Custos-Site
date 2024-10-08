@@ -1,7 +1,7 @@
 import axios from "axios";
 import Cookies from "js-cookie";
 // import imgUser from "../Components/imgs/userImg.png";
-const baseURL = "http://localhost:3000";
+const baseURL = "http://localhost:3001";
 
 export const signup = (data) => {
   const body = {
@@ -24,11 +24,9 @@ export const signin = async (data) => {
 };
 
 export const userLogged = () => {
-  const token = Cookies.get("token");
-  console.log("Token Enviado:", token);
   const response = axios.get(`${baseURL}/user/findById`, {
     headers: {
-      Authorization: `Bearer ${Cookies.get(token)}`,
+      Authorization: `Bearer ${Cookies.get("token")}`,
     },
   });
   return response;
