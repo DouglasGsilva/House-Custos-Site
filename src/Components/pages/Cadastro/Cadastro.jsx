@@ -4,8 +4,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import signupSchema from "../../../Schemas/signupSchema";
 import { signup } from "../../../services/userServices";
 import Cookies from "js-cookie";
-import { useNavigate } from "react-router-dom";
-
+import { useNavigate, Link } from "react-router-dom";
+import { IoMdArrowRoundBack } from "react-icons/io";
 const Cadastro = () => {
   const {
     register,
@@ -30,6 +30,9 @@ const Cadastro = () => {
 
   return (
     <div className='container-main'>
+      <Link to={"/"}>
+        <IoMdArrowRoundBack className='voltar' />
+      </Link>{" "}
       <h1 className='logo'>House Custos</h1>
       <form className='input-box' onSubmit={handleSubmit(HandleSubmit)}>
         <p className='placeholder'>Digite seu nome:</p>

@@ -3,7 +3,8 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { signin } from "../../../services/userServices";
 import signinSchema from "../../../Schemas/signinSchema";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+import { IoMdArrowRoundBack } from "react-icons/io";
 import Cookies from "js-cookie";
 
 const Login = () => {
@@ -32,6 +33,9 @@ const Login = () => {
 
   return (
     <div className='container-center'>
+      <Link to={"/"}>
+        <IoMdArrowRoundBack className='voltar' />
+      </Link>{" "}
       <form onSubmit={handleSubmit(HandleSubmit)} className='pape-login'>
         <p className='title'>Faça seu login</p>
         <input
@@ -52,7 +56,7 @@ const Login = () => {
 
         <p>
           {" "}
-          Não tem conta? <a href=''>Cadastre-se</a>
+          Não tem conta? <Link to={"/cadastro"}>Cadastre-se</Link>{" "}
         </p>
       </form>
     </div>
