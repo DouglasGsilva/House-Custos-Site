@@ -1,24 +1,14 @@
-import { categories } from "../../../data/categories";
-import { itens } from "../../../data/itens";
-import { useEffect, useState } from "react";
-import {
-  filterListByMonth,
-  getCurrentMonth,
-} from "../../../helpers/dateFilter";
+import TabelaArea from "../../custosComponents/TabelaArea";
+import HeaderCusto from "../../custosComponents/HeaderCusto.jsx";
+
+import "./Custos.css";
 
 const Custos = () => {
-  const [list, setList] = useState(itens);
-  const [filteredList, setFilteredList] = useState([]);
-  const [currentMonth, setCurrentMonth] = useState(getCurrentMonth());
-
-  useEffect(() => {
-    setFilteredList(filterListByMonth(list, currentMonth));
-  }, [list, currentMonth]);
-
   return (
-    <div className='custos-container'>
-      <h2>Pagina de custos</h2>
-    </div>
+    <>
+      <HeaderCusto />
+      <TabelaArea />
+    </>
   );
 };
 
