@@ -1,7 +1,7 @@
 import React from "react";
 import "../custosComponents/TabelaArea.css";
 
-const TabelaArea = () => {
+const TabelaArea = (list) => {
   return (
     <>
       {" "}
@@ -12,6 +12,15 @@ const TabelaArea = () => {
           <p>Título</p>
         </div>
         <p>Valor</p>
+      </div>
+      <div>
+        {list.map((item, index) => {
+          <div key={index}>
+            <p></p>
+            <p>{item}</p>
+            <p></p>
+          </div>;
+        })}
       </div>
     </>
   );
