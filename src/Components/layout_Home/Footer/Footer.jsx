@@ -1,14 +1,14 @@
-import "./Footer.css";
+import { FooterMain } from "./Footer.style";
 function Footer() {
   return (
     <>
-      <div className="content-footer">
+      <FooterMain>
         <ul>
           <li></li>
           <li></li>
           <li></li>
         </ul>
-      </div>
+      </FooterMain>
     </>
   );
 }

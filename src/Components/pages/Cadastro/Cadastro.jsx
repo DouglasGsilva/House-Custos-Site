@@ -1,11 +1,21 @@
-import "../Cadastro/Cadastro.css";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import signupSchema from "../../../Schemas/signupSchema";
 import { signup } from "../../../services/userServices";
 import Cookies from "js-cookie";
 import { useNavigate, Link } from "react-router-dom";
+
 import { IoMdArrowRoundBack } from "react-icons/io";
+import {
+  LinkExit,
+  MainContainer,
+  Logo,
+  FormCad,
+  Input,
+  ButtonCad,
+  ErrorMessage,
+} from "./Cadastro.style";
+
 const Cadastro = () => {
   const {
     register,
@@ -29,42 +39,38 @@ const Cadastro = () => {
   }
 
   return (
-    <div className='container-main'>
+    <MainContainer>
       <Link to={"/"}>
-        <IoMdArrowRoundBack className='voltar' />
+        <LinkExit>
+          <IoMdArrowRoundBack />
+        </LinkExit>
       </Link>{" "}
-      <h1 className='logo'>House Custos</h1>
-      <form className='input-box' onSubmit={handleSubmit(HandleSubmit)}>
-        <p className='placeholder'>Digite seu nome:</p>
-        <input className='input-data' type='text' {...register("name")} />
+      <Logo>House Custos</Logo>
+      <FormCad onSubmit={handleSubmit(HandleSubmit)}>
+        <p>Digite seu nome:</p>
+        <Input type='text' {...register("name")} />
 
-        {errors.name && <p className='error'>{errors.name.message}</p>}
+        {errors.name && <ErrorMessage>{errors.name.message}</ErrorMessage>}
 
-        <p className='placeholder'>Digite seu email:</p>
-        <input className='input-data' type='email' {...register("email")} />
+        <p>Digite seu email:</p>
+        <Input type='email' {...register("email")} />
 
-        {errors.email && <p className='error'>{errors.email.message}</p>}
+        {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
 
-        <p className='placeholder'>Digite sua senha:</p>
-        <input
-          type='password'
-          className='input-data'
-          {...register("password")}
-        />
+        <p>Digite sua senha:</p>
+        <Input type='password' {...register("password")} />
 
-        {errors.password && <p className='error'>{errors.password.message}</p>}
-        <p className='placeholder-CP'>Confirme sua senha:</p>
-        <input
-          type='password'
-          className='input-data'
-          {...register("confirmPassword")}
-        />
-        {errors.confirmPassword && (
-          <p className='error'>{errors.confirmPassword.message}</p>
+        {errors.password && (
+          <ErrorMessage>{errors.password.message}</ErrorMessage>
         )}
-        <button className='btn-cadastrar'>Cadastrar</button>
-      </form>
-    </div>
+        <p>Confirme sua senha:</p>
+        <Input type='password' {...register("confirmPassword")} />
+        {errors.confirmPassword && (
+          <ErrorMessage>{errors.confirmPassword.message}</ErrorMessage>
+        )}
+        <ButtonCad>Cadastrar</ButtonCad>
+      </FormCad>
+    </MainContainer>
   );
 };
 

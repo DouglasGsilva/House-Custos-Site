@@ -1,4 +1,3 @@
-import "./Login.css";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { signin } from "../../../services/userServices";
@@ -6,7 +5,14 @@ import signinSchema from "../../../Schemas/signinSchema";
 import { useNavigate, Link } from "react-router-dom";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import Cookies from "js-cookie";
-
+import {
+  ButtonLogin,
+  ContainerCenter,
+  FormLogin,
+  Input,
+  LinkExit,
+} from "./Login.style";
+import { ErrorMessage } from "../Cadastro/Cadastro.style";
 const Login = () => {
   const {
     register,
@@ -32,34 +38,35 @@ const Login = () => {
   }
 
   return (
-    <div className='container-center'>
+    <ContainerCenter>
       <Link to={"/"}>
-        <IoMdArrowRoundBack className='voltar' />
+        <LinkExit>
+          <IoMdArrowRoundBack />
+        </LinkExit>
       </Link>{" "}
-      <form onSubmit={handleSubmit(HandleSubmit)} className='pape-login'>
-        <p className='title'>Faça seu login</p>
-        <input
-          className='input'
+      <FormLogin onSubmit={handleSubmit(HandleSubmit)}>
+        <p>Faça seu login</p>
+        <Input
           type='text'
           placeholder='Digite seu e-mail'
           {...register("email")}
         />
-        {errors.email && <p className='error'>{errors.email.message}</p>}
-        <input
-          className='input'
+        {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
+        <Input
           type='password'
           placeholder='Digite sua senha'
           {...register("password")}
         />
-        {errors.password && <p className='error'>{errors.password.message}</p>}
-        <button className='btn-login'>Entrar</button>
+        {errors.password && (
+          <ErrorMessage>{errors.password.message}</ErrorMessage>
+        )}
+        <ButtonLogin>Entrar</ButtonLogin>
 
-        <p>
-          {" "}
+        <h4>
           Não tem conta? <Link to={"/cadastro"}>Cadastre-se</Link>{" "}
-        </p>
-      </form>
-    </div>
+        </h4>
+      </FormLogin>
+    </ContainerCenter>
   );
 };
 

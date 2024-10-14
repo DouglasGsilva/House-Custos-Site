@@ -1,17 +1,17 @@
-import "./Integrantes.css";
-function Integrantes() {
+import { AboutContainer } from "./About.style";
+function About() {
   return (
     <>
-      <div className="content">
-        <p id="text">
+      <AboutContainer>
+        <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem ipsa
           atque magni beatae nobis asperiores repellendus dolorum provident
           consequuntur, quis, totam illo placeat nam. Eligendi perspiciatis
           quasi animi id iste.
         </p>
-      </div>
+      </AboutContainer>
     </>
   );
 }
 
-export default Integrantes;
+export default About;

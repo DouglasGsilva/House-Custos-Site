@@ -1,10 +1,12 @@
-import "./MoreInfo.css";
-import imgFile from "../imgs/icone-pasta.png";
-import imgEngine from "../imgs/icone-engine.png";
-import imgHouse from "../imgs/icone-casinha.png";
 import { useLayoutEffect } from "react";
+
+import "./MoreInfo.css";
+import imgFile from "../../imgs/icone-pasta.png";
+import imgEngine from "../../imgs/icone-engine.png";
+import imgHouse from "../../imgs/icone-casinha.png";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { AreaContent, ContentImg, Img } from "./MoreInfo.style";
 
 const MoreInfo = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -43,48 +45,48 @@ const MoreInfo = () => {
 
   return (
     <>
-      <div className='area-content'>
+      <AreaContent>
         <section className='First-content'>
           <div className='content-first'>
-            <div className='content-1'>
-              <div className='img'>
+            <ContentImg>
+              <Img>
                 <img className='size-img' src={imgFile} alt='' />
-              </div>
-            </div>
+              </Img>
+            </ContentImg>
             <p id='about'>
               Aqui você poderá armazenar todo o seu historico de compras feitas
               no mês e devolveremos o balanço pra você.
             </p>
           </div>
         </section>
-        <div className='Second-content'>
+        <section className='Second-content'>
           <div className='content-second'>
-            <div className='content-2'>
-              <div className='img'>
+            <ContentImg>
+              <Img>
                 <img className='size-img' src={imgEngine} alt='' />
-              </div>
-            </div>
+              </Img>
+            </ContentImg>
             <p id='about'>
               você vai poder gerir com qualidade e ter total controle dos seus
               gastos além de todo o histórico do uso do seu dinheiro.
             </p>
           </div>
-        </div>
-        <div className='Third-content'>
+        </section>
+        <section className='Third-content'>
           <div className='content-third'>
-            <div className='content-3'>
-              <div className='img'>
+            <ContentImg>
+              <Img>
                 <img className='size-img' src={imgHouse} alt='' />
-              </div>
-            </div>
+              </Img>
+            </ContentImg>
             <p id='about'>
               isso tudo através de um sistema de armazenamento e de
               gerenciamento de capital tanto recebido quanto para que possa
               gerenciar a sua casa !!
             </p>
           </div>
-        </div>
-      </div>
+        </section>
+      </AreaContent>
     </>
   );
 };
