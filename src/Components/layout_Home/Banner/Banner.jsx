@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import img from "../../imgs/background-certo.jpg";
-import { BannerContent, BannerButton, BannerImg } from "./Banner.style";
+import { BannerContent, BannerButton, BannerImg } from "./style";
 function Banner() {
   return (
     <>

@@ -14,7 +14,7 @@ import {
   LinkSignout,
   NavLogo,
   LinkRoutes,
-} from "./Navbar.style";
+} from "./style";
 import { RxExit } from "react-icons/rx";
 
 function NavBar() {

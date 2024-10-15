@@ -11,8 +11,8 @@ import {
   FormLogin,
   Input,
   LinkExit,
-} from "./Login.style";
-import { ErrorMessage } from "../Cadastro/Cadastro.style";
+} from "./style";
+import { ErrorMessage } from "../Cadastro/style";
 const Login = () => {
   const {
     register,

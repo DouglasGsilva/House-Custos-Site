@@ -1,4 +1,4 @@
-import { AboutContainer } from "./About.style";
+import { AboutContainer } from "./style";
 function About() {
   return (
     <>

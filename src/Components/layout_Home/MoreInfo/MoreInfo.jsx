@@ -6,7 +6,7 @@ import imgEngine from "../../imgs/icone-engine.png";
 import imgHouse from "../../imgs/icone-casinha.png";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { AreaContent, ContentImg, Img } from "./MoreInfo.style";
+import { AreaContent, ContentImg, Img } from "./style";
 
 const MoreInfo = () => {
   gsap.registerPlugin(ScrollTrigger);

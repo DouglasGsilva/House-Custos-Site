@@ -1,4 +1,4 @@
-import { FooterMain } from "./Footer.style";
+import { FooterMain } from "./style";
 function Footer() {
   return (
     <>

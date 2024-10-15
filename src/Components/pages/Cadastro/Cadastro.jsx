@@ -14,7 +14,7 @@ import {
   Input,
   ButtonCad,
   ErrorMessage,
-} from "./Cadastro.style";
+} from "./style";
 
 const Cadastro = () => {
   const {
