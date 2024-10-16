@@ -10,13 +10,13 @@ export const categories = {
     expense: true,
   },
   bill: {
-    title: "boleto",
+    title: "Boleto",
     color: "black",
     expense: true,
   },
   salary: {
     title: "Salário",
-    color: "blue",
+    color: "green",
     expense: false,
   },
 };

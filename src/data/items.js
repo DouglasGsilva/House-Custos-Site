@@ -1,6 +1,6 @@
 export const items = [
   {
-    date: new Date(2024, 9, 20),
+    date: new Date(2024, 9, 6),
     category: "food",
     title: "Mercado",
     value: 220.45,
@@ -8,7 +8,7 @@ export const items = [
   {
     date: new Date(2024, 9, 30),
     category: "rent",
-    title: "Aluguel",
+    title: "Aluguel da Casa",
     value: 900.0,
   },
   {
