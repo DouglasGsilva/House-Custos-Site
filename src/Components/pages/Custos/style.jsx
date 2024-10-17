@@ -4,13 +4,15 @@ export const Container = styled.div``;
 export const Header = styled.div`
   background-color: darkblue;
   height: 150px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 `;
 export const HeaderTitle = styled.h1`
-  font-size: 35px;
+  font-size: 30px;
   margin: 0;
   padding: 0;
-  padding-top: 30px;
+  text-align: center;
   color: aliceblue;
 `;
 export const Body = styled.div`

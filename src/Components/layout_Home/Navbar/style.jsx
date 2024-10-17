@@ -49,6 +49,7 @@ export const LinkRouteCad = styled.a`
 
 export const LinkRoutes = styled.a`
   color: #3d3ddd;
+  margin-right: ${(props) => props.margin};
   &:hover {
     color: #2e2eb1;
   }

@@ -7,36 +7,16 @@ export const InputArea = ({ onAdd }) => {
   const [categoryField, setCategoryField] = useState("");
   const [titleField, setTitleField] = useState("");
   const [valueField, setValueField] = useState(0);
-
   let categoryKeys = Object.keys(categories);
 
   const handleAddEvent = () => {
-    let errors = [];
-
-    if (isNaN(new Date(dateField).getTime())) {
-      errors.push("Data Inválida!");
-    }
-    if (!categoryKeys.includes(categoryField)) {
-      errors.push("Categoria Inválida!");
-    }
-    if (titleField === "0") {
-      errors.push("Titulo Vazio!");
-    }
-    if (valueField === 0) {
-      errors.push("Valor Inválido!");
-    }
-
-    if (errors.length > 0) {
-      alert(errors.join("\n"));
-    } else {
-      onAdd({
-        date: newDateAjusted(dateField),
-        category: categoryField,
-        title: titleField,
-        value: valueField,
-      });
-      clearFields();
-    }
+    onAdd({
+      date: newDateAjusted(dateField),
+      category: categoryField,
+      title: titleField,
+      value: valueField,
+    });
+    clearFields();
   };
 
   const clearFields = () => {
@@ -64,11 +44,12 @@ export const InputArea = ({ onAdd }) => {
           onChange={(e) => setCategoryField(e.target.value)}
         >
           <>
-            <option></option>
             {categoryKeys.map((key, index) => {
-              <option key={index} value={key}>
-                {categories.title}
-              </option>;
+              return (
+                <option key={index} value={key}>
+                  {categories[key].title}
+                </option>
+              );
             })}
           </>
         </C.Select>
@@ -86,15 +67,15 @@ export const InputArea = ({ onAdd }) => {
       <C.InputLabel>
         <C.InputTitle>Valor</C.InputTitle>
         <C.Input
-          type='number'
+          type='double'
           value={valueField}
-          onChange={(e) => setValueField(e.target.value)}
+          onChange={(e) => setValueField(parseFloat(e.target.value))}
         />
       </C.InputLabel>
 
       <C.InputLabel>
         <C.InputTitle>&nbsp;</C.InputTitle>
-        <C.Button onClick={handleAddEvent()}>Adicionar</C.Button>
+        <C.Button onClick={handleAddEvent}>Adicionar</C.Button>
       </C.InputLabel>
     </C.Container>
   );

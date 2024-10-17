@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import * as C from "./style.jsx";
 import { items } from "../../../data/items.js";
 import { categories } from "../../../data/categories.js";
@@ -9,13 +9,17 @@ import {
 import { TableArea } from "./CustosComponents/TableArea/TableArea.jsx";
 import { InfoArea } from "./CustosComponents/InfoArea/InfoArea.jsx";
 import { InputArea } from "./InputArea/InputArea.jsx";
+import { UserContext } from "../../../context/UserContext.jsx";
+import { Link } from "react-router-dom";
+
+import { ImExit } from "react-icons/im";
 const Custos = () => {
   const [list, setList] = useState(items);
   const [filteredList, setFilteredList] = useState([]);
   const [currentMonth, setCurrentMonth] = useState(getCurrentMonth());
   const [income, setIncome] = useState(0);
   const [expense, setExpense] = useState(0);
-
+  const { user, setUser } = useContext(UserContext);
   useEffect(() => {
     setFilteredList(filterListByMonth(list, currentMonth));
   }, [list, currentMonth]);
@@ -37,7 +41,6 @@ const Custos = () => {
   }, [filteredList]);
 
   const handleMonthChange = (newMonth) => {
-    console.log(newMonth);
     setCurrentMonth(newMonth);
   };
 
@@ -51,8 +54,16 @@ const Custos = () => {
     <>
       <C.Container>
         <C.Header>
-          <C.HeaderTitle>Sistema Financeiro</C.HeaderTitle>
+          {user ? <C.HeaderTitle>{user.name}</C.HeaderTitle> : ""}
+
+          <C.HeaderTitle>House Custos</C.HeaderTitle>
+          <C.HeaderTitle>
+            <Link to={"/"}>
+              <ImExit />
+            </Link>
+          </C.HeaderTitle>
         </C.Header>
+
         <C.Body>
           <InfoArea
             onMonthChange={handleMonthChange}

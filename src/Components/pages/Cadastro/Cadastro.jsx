@@ -4,17 +4,9 @@ import signupSchema from "../../../Schemas/signupSchema";
 import { signup } from "../../../services/userServices";
 import Cookies from "js-cookie";
 import { useNavigate, Link } from "react-router-dom";
-
+import { IoMdAlert } from "react-icons/io";
 import { IoMdArrowRoundBack } from "react-icons/io";
-import {
-  LinkExit,
-  MainContainer,
-  Logo,
-  FormCad,
-  Input,
-  ButtonCad,
-  ErrorMessage,
-} from "./style";
+import * as C from "./style";
 
 const Cadastro = () => {
   const {
@@ -39,38 +31,54 @@ const Cadastro = () => {
   }
 
   return (
-    <MainContainer>
+    <C.MainContainer>
       <Link to={"/"}>
-        <LinkExit>
+        <C.LinkExit>
           <IoMdArrowRoundBack />
-        </LinkExit>
+        </C.LinkExit>
       </Link>{" "}
-      <Logo>House Custos</Logo>
-      <FormCad onSubmit={handleSubmit(HandleSubmit)}>
-        <p>Digite seu nome:</p>
-        <Input type='text' {...register("name")} />
+      <C.Logo>House Custos</C.Logo>
+      <C.FormCad onSubmit={handleSubmit(HandleSubmit)}>
+        <C.FormCadTitle margin='140px'>Digite seu nome:</C.FormCadTitle>
+        <C.Input type='text' {...register("name")} />
 
-        {errors.name && <ErrorMessage>{errors.name.message}</ErrorMessage>}
+        {errors.name && (
+          <C.ErrorMessage>
+            <IoMdAlert />
+            {errors.name.message}
+          </C.ErrorMessage>
+        )}
 
-        <p>Digite seu email:</p>
-        <Input type='email' {...register("email")} />
+        <C.FormCadTitle margin='140px'>Digite seu email:</C.FormCadTitle>
+        <C.Input type='email' {...register("email")} />
 
-        {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
+        {errors.email && (
+          <C.ErrorMessage>
+            <IoMdAlert />
+            {errors.email.message}
+          </C.ErrorMessage>
+        )}
 
-        <p>Digite sua senha:</p>
-        <Input type='password' {...register("password")} />
+        <C.FormCadTitle margin='140px'>Digite sua senha:</C.FormCadTitle>
+        <C.Input type='password' {...register("password")} />
 
         {errors.password && (
-          <ErrorMessage>{errors.password.message}</ErrorMessage>
+          <C.ErrorMessage>
+            <IoMdAlert />
+            {errors.password.message}
+          </C.ErrorMessage>
         )}
-        <p>Confirme sua senha:</p>
-        <Input type='password' {...register("confirmPassword")} />
+        <C.FormCadTitle margin='110px'>Confirme sua senha:</C.FormCadTitle>
+        <C.Input type='password' {...register("confirmPassword")} />
         {errors.confirmPassword && (
-          <ErrorMessage>{errors.confirmPassword.message}</ErrorMessage>
+          <C.ErrorMessage>
+            <IoMdAlert />
+            {errors.confirmPassword.message}
+          </C.ErrorMessage>
         )}
-        <ButtonCad>Cadastrar</ButtonCad>
-      </FormCad>
-    </MainContainer>
+        <C.ButtonCad>Cadastrar</C.ButtonCad>
+      </C.FormCad>
+    </C.MainContainer>
   );
 };
 

@@ -37,18 +37,17 @@ export const FormCad = styled.form`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 400px;
-  height: 500px;
+  width: 440px;
+  height: 607px;
   background-color: #f2f2f2;
   margin-right: 270px;
-  border-radius: 5px;
   padding-bottom: 10px;
+`;
 
-  & p {
-    display: flex;
-    margin-bottom: -1px;
-    margin-right: 140px;
-  }
+export const FormCadTitle = styled.p`
+  display: flex;
+  margin-bottom: -1px;
+  margin-right: ${(props) => props.margin};
 `;
 
 export const Input = styled.input`
@@ -80,8 +79,11 @@ export const ButtonCad = styled.button`
 `;
 
 export const ErrorMessage = styled.p`
-  background-color: #f79999;
   color: red;
-  padding: 0px 2px 0px 2px;
-  border-radius: 5px;
+  width: 345px;
+  height: 1px;
+  bottom: 15px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 150px;
 `;
