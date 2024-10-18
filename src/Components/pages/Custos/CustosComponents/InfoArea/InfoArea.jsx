@@ -39,7 +39,7 @@ export const InfoArea = ({ currentMonth, onMonthChange, income, expense }) => {
         <ResumeItem title='Despesas' value={expense} />
         <ResumeItem
           title='Balanço'
-          value={income - expense}
+          value={(income - expense).toFixed(2)}
           color={income - expense < 0 ? "red" : "green"}
         />
       </C.ResumeArea>

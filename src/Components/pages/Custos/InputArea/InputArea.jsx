@@ -67,8 +67,9 @@ export const InputArea = ({ onAdd }) => {
       <C.InputLabel>
         <C.InputTitle>Valor</C.InputTitle>
         <C.Input
-          type='double'
+          type='number'
           value={valueField}
+          step={"0.01"}
           onChange={(e) => setValueField(parseFloat(e.target.value))}
         />
       </C.InputLabel>

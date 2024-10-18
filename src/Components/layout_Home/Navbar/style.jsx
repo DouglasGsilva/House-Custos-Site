@@ -26,15 +26,7 @@ export const NavLi = styled.li`
   display: flex;
 `;
 
-export const LinkRouteName = styled.a`
-  margin-right: 50px;
-  font-size: 20px;
-  text-decoration: none;
-  cursor: pointer;
-  color: #3d3ddd;
-`;
-
-export const LinkRouteCad = styled.a`
+export const LinkRouteCad = styled.p`
   color: #3d3ddd;
   background-color: #f2f2f2;
   padding: 4px;
@@ -47,7 +39,7 @@ export const LinkRouteCad = styled.a`
   }
 `;
 
-export const LinkRoutes = styled.a`
+export const LinkRoutes = styled.p`
   color: #3d3ddd;
   margin-right: ${(props) => props.margin};
   &:hover {

@@ -20,7 +20,7 @@ export const filterListByMonth = (itemsList, date) => {
   for (let i in itemsList) {
     let itemDate = itemsList[i].date;
 
-    if (itemDate.getFullYear() === year && itemDate.getMonth() + 1 === month) {
+    if (itemDate.getFullYear() === year && itemDate.getMonth() === month) {
       newList.push(itemsList[i]);
     }
   }
