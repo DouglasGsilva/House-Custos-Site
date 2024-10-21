@@ -1,18 +1,23 @@
-import Banner from "../../layout_Home/Banner.jsx";
-import "../Home/Home.css";
-import MoreInfo from "../../layout_Home/MoreInfo.jsx";
-import Integrantes from "../../layout_Home/Integrantes.jsx";
-import Footer from "../../layout_Home/Footer.jsx";
-import NavBar from "../../layout_Home/Navbar.jsx";
+import Banner from "../../layout_Home/Banner/Banner.jsx";
+
+import MoreInfo from "../../layout_Home/MoreInfo/MoreInfo.jsx";
+import About from "../../layout_Home/About/About.jsx";
+import Footer from "../../layout_Home/Footer/Footer.jsx";
+import NavBar from "../../layout_Home/Navbar/Navbar.jsx";
+import { useEffect } from "react";
+import { ContainerHome } from "./style.jsx";
+
 function Home() {
+  useEffect(() => {});
+
   return (
-    <div className='home_main'>
+    <ContainerHome>
       <NavBar />
       <Banner />
       <MoreInfo />
-      <Integrantes />
+      <About />
       <Footer />
-    </div>
+    </ContainerHome>
   );
 }
 export default Home;
