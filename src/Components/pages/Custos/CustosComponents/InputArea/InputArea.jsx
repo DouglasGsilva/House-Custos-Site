@@ -1,13 +1,13 @@
 import { useState } from "react";
 import * as C from "./style";
-import { categories } from "../../../../data/categories";
-import { newDateAjusted } from "../../../../helpers/dateFilter";
+import { categories } from "../../../../../data/categories";
+import { newDateAjusted } from "../../../../../helpers/dateFilter";
 export const InputArea = ({ onAdd }) => {
+  let categoryKeys = Object.keys(categories);
   const [dateField, setDateField] = useState("");
-  const [categoryField, setCategoryField] = useState("");
+  const [categoryField, setCategoryField] = useState(categoryKeys[0]);
   const [titleField, setTitleField] = useState("");
   const [valueField, setValueField] = useState(0);
-  let categoryKeys = Object.keys(categories);
 
   const handleAddEvent = () => {
     onAdd({

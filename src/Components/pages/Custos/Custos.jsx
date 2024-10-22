@@ -8,18 +8,21 @@ import {
 } from "../../../helpers/dateFilter.js";
 import { TableArea } from "./CustosComponents/TableArea/TableArea.jsx";
 import { InfoArea } from "./CustosComponents/InfoArea/InfoArea.jsx";
-import { InputArea } from "./InputArea/InputArea.jsx";
+import { InputArea } from "./CustosComponents/InputArea/InputArea.jsx";
 import { UserContext } from "../../../context/UserContext.jsx";
 import { Link } from "react-router-dom";
 
 import { ImExit } from "react-icons/im";
+
 const Custos = () => {
   const [list, setList] = useState(items);
+  const [listStorage, setListStorage] = useState([]);
   const [filteredList, setFilteredList] = useState([]);
   const [currentMonth, setCurrentMonth] = useState(getCurrentMonth());
   const [income, setIncome] = useState(0);
   const [expense, setExpense] = useState(0);
   const { user, setUser } = useContext(UserContext);
+
   useEffect(() => {
     setFilteredList(filterListByMonth(list, currentMonth));
   }, [list, currentMonth]);
@@ -29,10 +32,17 @@ const Custos = () => {
     let expenseCount = 0;
 
     for (let i in filteredList) {
-      if (categories[filteredList[i].category].expense) {
-        expenseCount += filteredList[i].value;
+      const category = categories[filteredList[i].category];
+      if (category) {
+        if (category.expense) {
+          expenseCount += filteredList[i].value;
+        } else {
+          incomeCount += filteredList[i].value;
+        }
       } else {
-        incomeCount += filteredList[i].value;
+        console.warn(
+          `Categoria não encontrada para ${filteredList[i].category}`
+        );
       }
     }
 

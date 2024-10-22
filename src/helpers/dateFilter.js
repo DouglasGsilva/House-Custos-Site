@@ -60,6 +60,10 @@ export const formatCurrentMonth = (currentMonth) => {
     "Novembro",
     "Dezembro",
   ];
+
+  if (months === undefined) {
+    return 0;
+  }
   return `${months[parseInt(month) - 1]} de ${year}`;
 };
 

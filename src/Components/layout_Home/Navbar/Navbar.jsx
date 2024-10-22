@@ -20,6 +20,7 @@ import { RxExit } from "react-icons/rx";
 function NavBar() {
   const { user, setUser } = useContext(UserContext);
   const [loading, setLoading] = useState(true);
+
   const findUserLogged = async () => {
     try {
       const response = await userLogged();
@@ -84,8 +85,8 @@ function NavBar() {
               <LinkRoutes margin='50px'>{user.name} </LinkRoutes>
             </Link>
 
-            <LinkSignout>
-              <RxExit onClick={signOut} />
+            <LinkSignout onClick={signOut}>
+              <RxExit />
             </LinkSignout>
           </NavLi>
         ) : (

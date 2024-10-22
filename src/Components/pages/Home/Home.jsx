@@ -8,8 +8,6 @@ import { useEffect } from "react";
 import { ContainerHome } from "./style.jsx";
 
 function Home() {
-  useEffect(() => {});
-
   return (
     <ContainerHome>
       <NavBar />

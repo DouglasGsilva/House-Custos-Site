@@ -1,7 +1,7 @@
 export const categories = {
   food: {
     title: "Alimentação",
-    color: "#00f",
+    color: "blue",
     expense: true,
   },
   rent: {
