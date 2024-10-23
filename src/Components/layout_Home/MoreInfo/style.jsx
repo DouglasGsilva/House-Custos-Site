@@ -14,11 +14,11 @@ export const AreaContent = styled.div`
 `;
 
 export const ContentImg = styled.div`
-  width: 200px;
-  height: 200px;
+  width: 130px;
+  height: 130px;
   background-color: #cacaca;
   display: flex;
-  border-radius: 100px;
+  border-radius: 140px;
 `;
 
 export const Img = styled.div`

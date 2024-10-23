@@ -50,7 +50,7 @@ const MoreInfo = () => {
           <div className='content-first'>
             <ContentImg>
               <Img>
-                <img className='size-img' src={imgFile} alt='' />
+                <img src={imgFile} alt='' style={{ width: "130px" }} />
               </Img>
             </ContentImg>
             <p id='about'>
@@ -63,7 +63,7 @@ const MoreInfo = () => {
           <div className='content-second'>
             <ContentImg>
               <Img>
-                <img className='size-img' src={imgEngine} alt='' />
+                <img src={imgEngine} alt='' style={{ width: "130px" }} />
               </Img>
             </ContentImg>
             <p id='about'>
@@ -76,10 +76,14 @@ const MoreInfo = () => {
           <div className='content-third'>
             <ContentImg>
               <Img>
-                <img className='size-img' src={imgHouse} alt='' />
+                <img
+                  className='size-img'
+                  src={imgHouse}
+                  style={{ width: "130px" }}
+                />
               </Img>
             </ContentImg>
-            <p id='about'>
+            <p id='aboutLast'>
               isso tudo através de um sistema de armazenamento e de
               gerenciamento de capital tanto recebido quanto para que possa
               gerenciar a sua casa !!

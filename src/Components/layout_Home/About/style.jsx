@@ -4,18 +4,19 @@ export const AboutContainer = styled.div`
   background-image: url(${blueBg});
   background-size: cover;
   width: 100%;
-  height: 500px;
-  display: flex;
+  height: 650px;
+  display: grid;
   justify-content: space-between;
   align-items: center;
 `;
 
 export const ImageContainer = styled.img`
   background-color: aliceblue;
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
   border-radius: 200px;
-  margin-right: 70px;
+  justify-content: center;
+  margin: auto;
 `;
 
 export const Circle = styled.div`
@@ -34,6 +35,7 @@ export const TextContainer = styled.div`
   align-items: center;
   margin: auto;
   flex-direction: column;
+  margin-bottom: -5px;
 `;
 export const Text = styled.div`
   max-width: 700px;

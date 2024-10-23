@@ -16,24 +16,24 @@ function About() {
 
         <C.ImageContainer src={imageWoman}></C.ImageContainer>
         <C.Circle
-          width='80px'
-          height='80px'
-          right='50px'
-          top='1600px'
+          width='70px'
+          height='70px'
+          right='10px'
+          top='1460px'
           color='#2e2eb1'
         />
         <C.Circle
-          width='60px'
-          height='60px'
-          right='100px'
-          top='1670px'
+          width='50px'
+          height='50px'
+          right='45px'
+          top='1530px'
           color='#2682ce'
         />
         <C.Circle
-          width='40px'
-          height='40px'
-          right='160px'
-          top='1710px'
+          width='30px'
+          height='30px'
+          right='100px'
+          top='1570px'
           color='#adabab'
         />
       </C.AboutContainer>

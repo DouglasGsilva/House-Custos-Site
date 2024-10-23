@@ -12,4 +12,8 @@ export const FooterMain = styled.div`
 export const Social = styled.div``;
 
 export const Baseboard = styled.p``;
-export const ToTheTop = styled.div``;
+export const ToTheTop = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;

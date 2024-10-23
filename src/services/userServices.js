@@ -2,8 +2,7 @@ import axios from "axios";
 import Cookies from "js-cookie";
 
 const baseURL = "http://localhost:3001";
-// https://api-housecustos.onrender.com
-// http://localhost:3001
+
 export const signup = (data) => {
   const body = {
     ...data,
