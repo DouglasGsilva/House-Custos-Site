@@ -29,8 +29,6 @@ const Custos = () => {
     let expenseCount = 0;
 
     for (let i in filteredList) {
-      console.log("Item:", filteredList[i]); // Exibir o item completo
-      console.log("Categoria:", filteredList[i].category);
       if (categories[filteredList[i].category].expense) {
         expenseCount += filteredList[i].value;
       } else {
