@@ -27,7 +27,7 @@ const MoreInfo = () => {
         scrollTrigger: {
           trigger: ".Second-content",
           start: "top 300px",
-          end: "bottom 400px",
+          end: "bottom 500px",
           scrub: true,
         },
       }),
@@ -50,7 +50,10 @@ const MoreInfo = () => {
           <div className='content-first'>
             <ContentImg>
               <Img>
-                <img className='size-img' src={imgFile} alt='' />
+                <img
+                  src={imgFile}
+                  style={{ width: "150px", height: "150px" }}
+                />
               </Img>
             </ContentImg>
             <p id='about'>
@@ -63,7 +66,10 @@ const MoreInfo = () => {
           <div className='content-second'>
             <ContentImg>
               <Img>
-                <img className='size-img' src={imgEngine} alt='' />
+                <img
+                  src={imgEngine}
+                  style={{ width: "150px", height: "150px" }}
+                />
               </Img>
             </ContentImg>
             <p id='about'>
@@ -76,7 +82,10 @@ const MoreInfo = () => {
           <div className='content-third'>
             <ContentImg>
               <Img>
-                <img className='size-img' src={imgHouse} alt='' />
+                <img
+                  style={{ width: "150px", height: "150px" }}
+                  src={imgHouse}
+                />
               </Img>
             </ContentImg>
             <p id='about'>

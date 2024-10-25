@@ -80,9 +80,7 @@ function NavBar() {
 
         {user ? (
           <NavLi>
-            <Link to={"/profile"}>
-              <LinkRoutes margin='50px'>{user.name} </LinkRoutes>
-            </Link>
+            <LinkRoutes margin='12px'>{user.name} </LinkRoutes>
 
             <LinkSignout>
               <RxExit onClick={signOut} />

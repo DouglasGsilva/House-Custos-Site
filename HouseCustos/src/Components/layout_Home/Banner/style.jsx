@@ -9,7 +9,7 @@ export const BannerContent = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
-  top: 140px;
+  top: 110px;
   left: 0;
 
   & h1 {
@@ -52,6 +52,6 @@ export const BannerImg = styled.img`
   align-items: center;
   margin: 0 auto;
   width: 100%;
-  height: 650px;
+  height: 620px;
   object-fit: cover;
 `;

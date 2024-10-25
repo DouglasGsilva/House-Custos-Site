@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const AreaContent = styled.div`
   width: 100%;
   height: 100%;
-  background-color: #5ea9e7;
+  background-color: #f2f2f2;
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
@@ -14,10 +14,11 @@ export const AreaContent = styled.div`
 `;
 
 export const ContentImg = styled.div`
-  width: 200px;
-  height: 200px;
-  background-color: #ffffff;
+  width: 150px;
+  height: 150px;
+  background-color: #ccc;
   display: flex;
+  align-items: center;
   border-radius: 100px;
 `;
 
