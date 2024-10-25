@@ -52,7 +52,7 @@ const MoreInfo = () => {
               <Img>
                 <img
                   src={imgFile}
-                  style={{ width: "150px", height: "150px" }}
+                  style={{ width: "100px", height: "100px" }}
                 />
               </Img>
             </ContentImg>
@@ -68,7 +68,7 @@ const MoreInfo = () => {
               <Img>
                 <img
                   src={imgEngine}
-                  style={{ width: "150px", height: "150px" }}
+                  style={{ width: "100px", height: "100px" }}
                 />
               </Img>
             </ContentImg>
@@ -83,7 +83,7 @@ const MoreInfo = () => {
             <ContentImg>
               <Img>
                 <img
-                  style={{ width: "150px", height: "150px" }}
+                  style={{ width: "100px", height: "100px" }}
                   src={imgHouse}
                 />
               </Img>

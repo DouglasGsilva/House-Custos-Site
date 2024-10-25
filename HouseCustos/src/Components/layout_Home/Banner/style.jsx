@@ -10,20 +10,20 @@ export const BannerContent = styled.div`
   width: 100%;
   height: 100%;
   top: 110px;
-  left: 0;
 
   & h1 {
     color: #000000;
     text-transform: uppercase;
-    margin-top: 100px;
+    margin-top: 40px;
+    font-size: 35px;
   }
   & p {
-    color: #000000;
+    color: black;
     max-width: 40rem;
     margin: 0 auto;
     margin-bottom: 2rem;
-    margin-top: 30px;
-    -webkit-text-stroke: #f2f2f2 0.05px;
+    margin-top: 20px;
+    font-size: 14px;
   }
 `;
 
@@ -52,6 +52,6 @@ export const BannerImg = styled.img`
   align-items: center;
   margin: 0 auto;
   width: 100%;
-  height: 620px;
+  height: 450px;
   object-fit: cover;
 `;

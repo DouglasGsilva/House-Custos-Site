@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const NavbarBg = styled.div`
-  width: 360px;
-  height: 120px;
+  width: 100%;
+  height: 90px;
   background-color: none;
   display: flex;
   align-items: center;
@@ -15,13 +15,13 @@ export const NavLinks = styled.ul`
   display: flex;
   align-items: center;
   list-style-type: none;
-  margin-left: -30px;
+  margin-left: -20px;
   background-color: #000000;
 `;
 
 export const NavLi = styled.li`
   margin-right: 20px;
-  font-size: 15px;
+  font-size: 12px;
   text-decoration: none;
   display: flex;
 `;
@@ -32,7 +32,7 @@ export const LinkRouteCad = styled.p`
   padding: 4px;
   border-radius: 4px;
   transition: all 0.2s linear;
-  width: 90px;
+  width: 72px;
   &:hover {
     color: #f2f2f2;
     background-color: #3d3ddd;
@@ -69,9 +69,9 @@ export const LinkSignout = styled.div`
 
 export const NavLogo = styled.img`
   padding: 20px;
-  max-width: 40px;
-  margin-left: 10px;
-  height: 40px;
+  max-width: 30px;
+
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;

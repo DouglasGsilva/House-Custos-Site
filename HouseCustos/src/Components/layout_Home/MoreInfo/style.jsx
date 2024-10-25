@@ -9,13 +9,14 @@ export const AreaContent = styled.div`
   box-sizing: border-box;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   display: flexbox;
   padding: 10px 10px 10px 10px;
 `;
 
 export const ContentImg = styled.div`
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   background-color: #ccc;
   display: flex;
   align-items: center;
