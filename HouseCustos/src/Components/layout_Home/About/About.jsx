@@ -1,15 +1,39 @@
-import { AboutContainer } from "./style";
+import * as C from "./style";
+import ImageWoman from "../../imgs/image-Woman2.jpg";
 function About() {
   return (
     <>
-      <AboutContainer>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem ipsa
-          atque magni beatae nobis asperiores repellendus dolorum provident
-          consequuntur, quis, totam illo placeat nam. Eligendi perspiciatis
-          quasi animi id iste.
-        </p>
-      </AboutContainer>
+      <C.AboutContainer>
+        <C.Text>
+          Priorizando a sua estabilidade finaanceira nosso sistema faz um
+          balanço do quanto foi gasto ou acrescentado para uma melhor
+          visualização do seu capital, fazendo assim com que você possa
+          identificar o uso "errado" do seu dinheiro.
+        </C.Text>
+        <C.Button>Testar</C.Button>
+        <C.Img src={ImageWoman} />
+        <C.Circle
+          left='230px'
+          top='1265px'
+          color='#3d3ddd'
+          width='35px'
+          height='35px'
+        />
+        <C.Circle
+          left='215px'
+          top='1301px'
+          color='#2881ca'
+          width='25px'
+          height='25px'
+        />
+        <C.Circle
+          left='195px'
+          top='1322px'
+          color='#888686'
+          width='20px'
+          height='20px'
+        />
+      </C.AboutContainer>
     </>
   );
 }

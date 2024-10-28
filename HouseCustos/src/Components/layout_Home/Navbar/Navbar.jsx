@@ -64,19 +64,6 @@ function NavBar() {
         ) : (
           ""
         )}
-        {!user ? (
-          <NavLi>
-            <Link to={"/login"}>
-              <LinkRoutes>Custos</LinkRoutes>
-            </Link>
-          </NavLi>
-        ) : (
-          <NavLi>
-            <Link to={"/custos"}>
-              <LinkRoutes>Custos</LinkRoutes>
-            </Link>
-          </NavLi>
-        )}
 
         {user ? (
           <NavLi>
@@ -87,11 +74,20 @@ function NavBar() {
             </LinkSignout>
           </NavLi>
         ) : (
-          <NavLi>
-            <Link to={"/login"}>
-              <LinkRoutes>Entrar</LinkRoutes>
-            </Link>
-          </NavLi>
+          ((
+            <NavLi>
+              <Link to={"/custos"}>
+                <LinkRoutes>Custos</LinkRoutes>
+              </Link>
+            </NavLi>
+          ),
+          (
+            <NavLi>
+              <Link to={"/login"}>
+                <LinkRoutes>Entrar</LinkRoutes>
+              </Link>
+            </NavLi>
+          ))
         )}
       </NavLinks>
     </NavbarBg>

@@ -4,6 +4,7 @@
 }
 .Second-content {
   display: flex;
+  width: 100%;
   padding: 5px;
 }
 .Third-content {
@@ -20,7 +21,7 @@
 }
 .content-second {
   display: flex;
-  transform: translateX(100%);
+  transform: translateX(-100%);
   transition: all 0.2s linear;
   position: relative;
   opacity: 0;
