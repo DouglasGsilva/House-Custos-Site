@@ -53,4 +53,10 @@ export const Circle = styled.div`
   @media (min-width: 360px) {
     left: ${(props) => props.left360};
   }
+  @media (min-width: 375px) {
+    left: ${(props) => props.left375};
+  }
+  @media (min-width: 375px) {
+    left: ${(props) => props.left425};
+  }
 `;
