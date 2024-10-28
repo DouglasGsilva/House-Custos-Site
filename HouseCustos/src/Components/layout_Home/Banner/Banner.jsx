@@ -8,7 +8,7 @@ function Banner() {
       <BannerContent>
         <h1>House Custos</h1>
         <p>
-          Um site onde contará com o custo da casa, podendo fazer o calculo das
+          Um site onde contará com o custo da casa, podendo fazer o cálculo das
           despesas e fazendo assim uma administração mais concisa.
         </p>
         <Link to='/cadastro'>

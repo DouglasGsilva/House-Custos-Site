@@ -19,9 +19,9 @@ function Footer() {
           <FaArrowAltCircleUp
             style={{ width: "25px", height: "25px", marginTop: "-5px" }}
           />
+          <C.Rodape>DouglasCorp LTDA</C.Rodape>
         </C.Container>
       </C.FooterMain>
-      <C.Rodape>DouglasCorp LTDA</C.Rodape>
     </>
   );
 }

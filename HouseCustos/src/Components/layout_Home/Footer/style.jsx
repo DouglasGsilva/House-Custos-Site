@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const FooterMain = styled.div`
   width: 100%;
-  height: 150px;
+  height: 200px;
   background-color: aliceblue;
   display: flex;
   justify-content: center;
