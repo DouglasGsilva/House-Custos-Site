@@ -47,4 +47,8 @@ export const Circle = styled.div`
   position: absolute;
   left: ${(props) => props.left};
   top: ${(props) => props.top};
+
+  @media (min-width: 360px) {
+    left: ${(props) => props.left360};
+  }
 `;
