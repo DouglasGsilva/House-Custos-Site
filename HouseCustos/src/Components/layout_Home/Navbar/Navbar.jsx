@@ -69,25 +69,20 @@ function NavBar() {
           <NavLi>
             <LinkRoutes margin='12px'>{user.name} </LinkRoutes>
 
+            <Link to={"/custos"}>
+              <LinkRoutes margin='30px'>Custos</LinkRoutes>
+            </Link>
+
             <LinkSignout>
               <RxExit onClick={signOut} />
             </LinkSignout>
           </NavLi>
         ) : (
-          ((
-            <NavLi>
-              <Link to={"/custos"}>
-                <LinkRoutes>Custos</LinkRoutes>
-              </Link>
-            </NavLi>
-          ),
-          (
-            <NavLi>
-              <Link to={"/login"}>
-                <LinkRoutes>Entrar</LinkRoutes>
-              </Link>
-            </NavLi>
-          ))
+          <NavLi>
+            <Link to={"/login"}>
+              <LinkRoutes>Entrar</LinkRoutes>
+            </Link>
+          </NavLi>
         )}
       </NavLinks>
     </NavbarBg>
