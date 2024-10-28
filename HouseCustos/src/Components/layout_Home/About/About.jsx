@@ -15,7 +15,7 @@ function About() {
         <C.Circle
           left='230px'
           left360='250px'
-          top='1265px'
+          top='1275px'
           color='#3d3ddd'
           width='35px'
           height='35px'
@@ -23,7 +23,7 @@ function About() {
         <C.Circle
           left='215px'
           left360='235px'
-          top='1301px'
+          top='1311px'
           color='#2881ca'
           width='25px'
           height='25px'
@@ -31,7 +31,7 @@ function About() {
         <C.Circle
           left='195px'
           left360='215px'
-          top='1322px'
+          top='1332px'
           color='#888686'
           width='20px'
           height='20px'

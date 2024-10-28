@@ -11,8 +11,10 @@ export const AboutContainer = styled.div`
 `;
 
 export const Text = styled.p`
-  font-size: 11px;
+  font-size: 14px;
   text-align: center;
+  margin-left: 15px;
+  margin-right: 15px;
 `;
 
 export const Button = styled.button`
