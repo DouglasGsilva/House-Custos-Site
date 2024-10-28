@@ -32,7 +32,8 @@ export const LinkRouteCad = styled.p`
   padding: 4px;
   border-radius: 4px;
   transition: all 0.2s linear;
-  width: 72px;
+  font-size: 16px;
+  width: 97px;
   &:hover {
     color: #f2f2f2;
     background-color: #3d3ddd;
@@ -42,7 +43,7 @@ export const LinkRouteCad = styled.p`
 export const LinkRoutes = styled.p`
   color: #3d3ddd;
   margin-right: ${(props) => props.margin};
-
+  font-size: 16px;
   transition: all 0.2s linear;
   &:hover {
     color: #fff;
