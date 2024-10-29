@@ -27,6 +27,15 @@ export const BannerContent = styled.div`
     margin-top: 20px;
     font-size: 20px;
   }
+
+  @media (min-width: 768px) {
+    & h1 {
+      font-size: 45px;
+    }
+    & p {
+      font-size: 25px;
+    }
+  }
 `;
 
 export const BannerButton = styled.button`
@@ -46,6 +55,12 @@ export const BannerButton = styled.button`
     color: #f2f2f2;
     border-radius: 6px;
   }
+
+  @media (min-width: 768px) {
+    width: 170px;
+    height: 40px;
+    font-size: 18px;
+  }
 `;
 
 export const BannerImg = styled.img`
@@ -56,4 +71,8 @@ export const BannerImg = styled.img`
   width: 100%;
   height: 450px;
   object-fit: cover;
+
+  @media (min-width: 768px) {
+    height: 500px;
+  }
 `;

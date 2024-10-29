@@ -4,7 +4,7 @@ import blueBg from "../../imgs/blue-bg.png";
 export const AboutContainer = styled.div`
   background-image: url(${blueBg});
   width: 100%;
-  height: 500px;
+  height: 100%;
   display: grid;
   justify-content: center;
   align-items: center;
@@ -15,6 +15,14 @@ export const Text = styled.p`
   text-align: center;
   margin-left: 15px;
   margin-right: 15px;
+
+  @media (min-width: 768px) {
+    font-size: 24px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
 `;
 
 export const Button = styled.button`
@@ -33,6 +41,13 @@ export const Button = styled.button`
   &:hover {
     background-color: #2525df;
   }
+
+  @media (min-width: 768px) {
+    width: 100px;
+    font-size: 25px;
+    height: 40px;
+    margin-bottom: 30px;
+  }
 `;
 
 export const Img = styled.img`
@@ -40,6 +55,24 @@ export const Img = styled.img`
   height: 200px;
   border-radius: 100px;
   margin: auto;
+
+  @media (min-width: 375px) {
+    width: 250px;
+    height: 250px;
+    border-radius: 150px;
+  }
+  @media (min-width: 425px) {
+    width: 250px;
+    height: 250px;
+    border-radius: 150px;
+  }
+
+  @media (min-width: 768px) {
+    width: 350px;
+    height: 350px;
+    border-radius: 200px;
+    margin-bottom: 30px;
+  }
 `;
 export const Circle = styled.div`
   background-color: ${(props) => props.color};
@@ -56,7 +89,14 @@ export const Circle = styled.div`
   @media (min-width: 375px) {
     left: ${(props) => props.left375};
   }
-  @media (min-width: 375px) {
+  @media (min-width: 425px) {
     left: ${(props) => props.left425};
+  }
+  @media (min-width: 768px) {
+    width: ${(props) => props.widthtablet};
+    height: ${(props) => props.heighttablet};
+    top: ${(props) => props.toptablet};
+    left: ${(props) => props.lefttablet};
+    border-radius: 100px;
   }
 `;

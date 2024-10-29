@@ -21,6 +21,11 @@ export const ContentImg = styled.div`
   display: flex;
   align-items: center;
   border-radius: 100px;
+
+  @media (min-width: 768px) {
+    width: 200px;
+    height: 200px;
+  }
 `;
 
 export const Img = styled.div`

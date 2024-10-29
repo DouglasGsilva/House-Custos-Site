@@ -13,34 +13,46 @@ function About() {
         <C.Button>Testar</C.Button>
         <C.Img src={ImageWoman} />
         <C.Circle
-          left='230px'
+          left='235px'
           left360='250px'
-          left375='260px'
-          left425='280px'
+          left375='280px'
+          left425='300px'
+          lefttablet='515px'
           top='1275px'
+          toptablet='1620px'
           color='#3d3ddd'
           width='35px'
           height='35px'
+          widthtablet='70px'
+          heighttablet='70px'
         />
         <C.Circle
-          left='215px'
+          left='220px'
           left360='235px'
-          left375='245px'
-          left425='265px'
+          left375='265px'
+          left425='285px'
+          lefttablet='485px'
           top='1311px'
+          toptablet='1695px'
           color='#2881ca'
           width='25px'
           height='25px'
+          widthtablet='50px'
+          heighttablet='50px'
         />
         <C.Circle
           left='195px'
           left360='215px'
-          left375='220px'
-          left425='245px'
+          left425='265px'
+          left375='245px'
+          lefttablet='440px'
           top='1332px'
+          toptablet='1745px'
           color='#888686'
           width='20px'
           height='20px'
+          widthtablet='35px'
+          heighttablet='35px'
         />
       </C.AboutContainer>
     </>

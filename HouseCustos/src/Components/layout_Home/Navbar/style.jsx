@@ -8,6 +8,10 @@ export const NavbarBg = styled.div`
   align-items: center;
   justify-content: space-between;
   position: absolute;
+
+  @media (min-width: 768px) {
+    height: 100px;
+  }
 `;
 
 export const NavLinks = styled.ul`
@@ -17,13 +21,20 @@ export const NavLinks = styled.ul`
   list-style-type: none;
   margin-left: -20px;
   background-color: #000000;
+
+  @media (min-width: 768px) {
+    margin-right: 10px;
+  }
 `;
 
 export const NavLi = styled.li`
   margin-right: 20px;
-  font-size: 12px;
   text-decoration: none;
   display: flex;
+
+  @media (min-width: 768px) {
+    margin-right: 60px;
+  }
 `;
 
 export const LinkRouteCad = styled.p`
@@ -38,6 +49,11 @@ export const LinkRouteCad = styled.p`
     color: #f2f2f2;
     background-color: #3d3ddd;
   }
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    width: 100%;
+  }
 `;
 
 export const LinkRoutes = styled.p`
@@ -47,6 +63,10 @@ export const LinkRoutes = styled.p`
   transition: all 0.2s linear;
   &:hover {
     color: #fff;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 20px;
   }
 `;
 
@@ -71,10 +91,15 @@ export const LinkSignout = styled.div`
 export const NavLogo = styled.img`
   padding: 20px;
   max-width: 30px;
-
   height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   scale: 0.9;
+
+  @media (min-width: 768px) {
+    max-width: 50px;
+    height: 50px;
+    margin-left: 30px;
+  }
 `;

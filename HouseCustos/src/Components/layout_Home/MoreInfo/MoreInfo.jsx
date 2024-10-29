@@ -6,7 +6,7 @@ import imgEngine from "../../imgs/icone-engine.png";
 import imgHouse from "../../imgs/icone-casinha.png";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { AreaContent, ContentImg, Img } from "./style";
+import * as C from "./style";
 
 const MoreInfo = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -45,17 +45,14 @@ const MoreInfo = () => {
 
   return (
     <>
-      <AreaContent>
+      <C.AreaContent>
         <section className='First-content'>
           <div className='content-first'>
-            <ContentImg>
-              <Img>
-                <img
-                  src={imgFile}
-                  style={{ width: "100px", height: "100px" }}
-                />
-              </Img>
-            </ContentImg>
+            <C.ContentImg>
+              <C.Img>
+                <img src={imgFile} className='img' />
+              </C.Img>
+            </C.ContentImg>
             <p id='about'>
               Aqui você poderá armazenar todo o seu historico de compras feitas
               no mês e devolveremos o balanço pra você.
@@ -64,14 +61,11 @@ const MoreInfo = () => {
         </section>
         <section className='Second-content'>
           <div className='content-second'>
-            <ContentImg>
-              <Img>
-                <img
-                  src={imgEngine}
-                  style={{ width: "100px", height: "100px" }}
-                />
-              </Img>
-            </ContentImg>
+            <C.ContentImg>
+              <C.Img>
+                <img src={imgEngine} className='img' />
+              </C.Img>
+            </C.ContentImg>
             <p id='about'>
               você vai poder gerir com qualidade e ter total controle dos seus
               gastos além de todo o histórico do uso do seu dinheiro.
@@ -80,14 +74,11 @@ const MoreInfo = () => {
         </section>
         <section className='Third-content'>
           <div className='content-third'>
-            <ContentImg>
-              <Img>
-                <img
-                  style={{ width: "100px", height: "100px" }}
-                  src={imgHouse}
-                />
-              </Img>
-            </ContentImg>
+            <C.ContentImg>
+              <C.Img>
+                <img className='img' src={imgHouse} />
+              </C.Img>
+            </C.ContentImg>
             <p id='about'>
               isso tudo através de um sistema de armazenamento e de
               gerenciamento de capital tanto recebido quanto para que possa
@@ -95,7 +86,7 @@ const MoreInfo = () => {
             </p>
           </div>
         </section>
-      </AreaContent>
+      </C.AreaContent>
     </>
   );
 };
