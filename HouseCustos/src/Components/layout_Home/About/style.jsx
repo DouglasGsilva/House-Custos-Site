@@ -51,14 +51,23 @@ export const Button = styled.button`
     background-color: #2525df;
   }
 
+  @media (min-width: 375px) {
+    margin-top: -25px;
+  }
+
+  @media (min-width: 425px) {
+    margin-top: -40px;
+  }
   @media (min-width: 768px) {
     width: 100px;
     font-size: 25px;
     height: 40px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
+    margin-top: 10px;
   }
   @media (min-width: 1024px) {
     margin-bottom: 100px;
+    margin-top: -40px;
   }
 `;
 
@@ -81,8 +90,8 @@ export const Img = styled.img`
   }
 
   @media (min-width: 768px) {
-    width: 350px;
-    height: 350px;
+    width: 400px;
+    height: 400px;
     border-radius: 200px;
     margin-bottom: 30px;
   }
@@ -91,29 +100,47 @@ export const Img = styled.img`
     height: 400px;
   }
 `;
+
+export const ContentCircle = styled.div`
+  width: 100px;
+  height: 100px;
+  background-color: none;
+  position: absolute;
+  left: 171px;
+  bottom: -745px;
+
+  @media (min-width: 360px) {
+    left: 190px;
+  }
+  @media (min-width: 375px) {
+    left: 200px;
+    bottom: -735px;
+  }
+  @media (min-width: 425px) {
+    height: 105px;
+    left: 245px;
+    bottom: -760px;
+  }
+  @media (min-width: 768px) {
+    scale: 2;
+    left: 460px;
+  }
+  @media (min-width: 1024px) {
+    bottom: -1450px;
+    left: 745px;
+  }
+`;
 export const Circle = styled.div`
   background-color: ${(props) => props.color};
   width: ${(props) => props.width};
   height: ${(props) => props.height};
-  border-radius: 50px;
+  border-radius: 100px;
   position: absolute;
   left: ${(props) => props.left};
-  top: ${(props) => props.top};
+  bottom: ${(props) => props.bot};
 
-  @media (min-width: 360px) {
-    left: ${(props) => props.left360};
-  }
-  @media (min-width: 375px) {
-    left: ${(props) => props.left375};
-  }
   @media (min-width: 425px) {
-    left: ${(props) => props.left425};
-  }
-  @media (min-width: 768px) {
-    width: ${(props) => props.widthtablet};
-    height: ${(props) => props.heighttablet};
-    top: ${(props) => props.toptablet};
-    left: ${(props) => props.lefttablet};
-    border-radius: 100px;
+    width: ${(props) => props.widthL};
+    height: ${(props) => props.heightL};
   }
 `;

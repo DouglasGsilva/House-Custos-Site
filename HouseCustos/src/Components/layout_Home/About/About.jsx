@@ -12,48 +12,34 @@ function About() {
         </C.Text>
         <C.Button>Testar</C.Button>
         <C.Img src={ImageWoman} />
-        <C.Circle
-          left='235px'
-          left360='255px'
-          left375='265px'
-          left425='300px'
-          lefttablet='515px'
-          top='1200px'
-          toptablet='1620px'
-          color='#3d3ddd'
-          width='35px'
-          height='35px'
-          widthtablet='70px'
-          heighttablet='70px'
-        />
-        <C.Circle
-          left='220px'
-          left360='240px'
-          left375='250px'
-          left425='285px'
-          lefttablet='485px'
-          top='1240px'
-          toptablet='1695px'
-          color='#2881ca'
-          width='25px'
-          height='25px'
-          widthtablet='50px'
-          heighttablet='50px'
-        />
-        <C.Circle
-          left='195px'
-          left360='215px'
-          left425='265px'
-          left375='230px'
-          lefttablet='440px'
-          top='1265px'
-          toptablet='1745px'
-          color='#888686'
-          width='20px'
-          height='20px'
-          widthtablet='35px'
-          heighttablet='35px'
-        />
+        <C.ContentCircle>
+          <C.Circle
+            color='#3d3ddd'
+            width='35px'
+            widthL='40px'
+            height='35px'
+            heightL='40px'
+            left='65px'
+          />
+          <C.Circle
+            color='#2881ca'
+            width='25px'
+            widthL='30px'
+            height='25px'
+            heightL='30px'
+            left='55px'
+            bot='35px'
+          />
+          <C.Circle
+            color='#888686'
+            width='20px'
+            widthL='25px'
+            height='20px'
+            heightL='25px'
+            left='35px'
+            bot='15px'
+          />
+        </C.ContentCircle>
       </C.AboutContainer>
     </>
   );

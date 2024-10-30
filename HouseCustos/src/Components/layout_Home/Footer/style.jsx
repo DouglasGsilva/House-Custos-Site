@@ -69,7 +69,7 @@ export const Text = styled.p`
 `;
 
 export const logo = styled.div`
-  font-size: 13px;
+  font-size: 30px;
   @media (min-width: 768px) {
     font-size: 50px;
   }
