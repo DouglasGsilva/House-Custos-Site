@@ -18,14 +18,13 @@ export const BannerContent = styled.div`
     font-size: 35px;
   }
   & p {
-    -webkit-text-stroke-width: 0.09px;
-    -webkit-text-stroke-color: #ffffff;
     color: #000000;
     max-width: 40rem;
     margin: 0 auto;
     margin-bottom: 2rem;
     margin-top: 20px;
     font-size: 20px;
+    font-weight: bold;
   }
 
   @media (min-width: 768px) {
