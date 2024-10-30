@@ -111,6 +111,7 @@ export const ContentCircle = styled.div`
 
   @media (min-width: 360px) {
     left: 190px;
+    bottom: -510px;
   }
   @media (min-width: 375px) {
     left: 200px;
