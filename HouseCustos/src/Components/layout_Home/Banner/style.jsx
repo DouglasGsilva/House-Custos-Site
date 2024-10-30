@@ -36,6 +36,10 @@ export const BannerContent = styled.div`
       font-size: 25px;
     }
   }
+
+  @media (min-width: 1024px) {
+    top: 200px;
+  }
 `;
 
 export const BannerButton = styled.button`
@@ -74,5 +78,9 @@ export const BannerImg = styled.img`
 
   @media (min-width: 768px) {
     height: 500px;
+  }
+
+  @media (min-width: 1024px) {
+    height: 700px;
   }
 `;
