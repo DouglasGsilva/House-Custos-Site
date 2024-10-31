@@ -10,15 +10,13 @@ export const MainContainer = styled.div`
   align-items: center;
   margin: auto;
   @media (min-width: 360px) {
-    height: 710px;
+    height: 712px;
   }
-
   @media (min-width: 375px) {
-    background-color: black;
+    height: 756px;
   }
-
-  @media (min-width: 425px) {
-    background-color: #5dd11d;
+  @media (min-width: 412px) {
+    height: 830px;
   }
 
   @media (min-width: 768px) {
