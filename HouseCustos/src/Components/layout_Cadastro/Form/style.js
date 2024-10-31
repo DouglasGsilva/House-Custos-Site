@@ -9,6 +9,9 @@ export const MainContainer = styled.div`
   flex-direction: column;
   align-items: center;
   margin: auto;
+  @media (min-width: 425px) {
+    height: 1200px;
+  }
 
   @media (min-width: 768px) {
     height: 1200px;
