@@ -12,7 +12,7 @@ import {
   Input,
   LinkExit,
 } from "./style";
-import { ErrorMessage } from "../Cadastro/style";
+import { ErrorMessage } from "../../layout_Cadastro/Form/style.js";
 const Login = () => {
   const {
     register,
