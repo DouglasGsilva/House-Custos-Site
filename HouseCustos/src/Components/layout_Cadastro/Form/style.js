@@ -9,8 +9,8 @@ export const MainContainer = styled.div`
   flex-direction: column;
   align-items: center;
   margin: auto;
-  @media (min-width: 425px) {
-    height: 1200px;
+  @media (min-width: 360px) {
+    height: 710px;
   }
 
   @media (min-width: 768px) {
@@ -43,6 +43,9 @@ export const Logo = styled.h1`
   color: #f2f2f2;
   text-align: center;
   margin-top: 60px;
+
+  @media (min-width: 360px) {
+  }
 `;
 
 export const FormCad = styled.form`
