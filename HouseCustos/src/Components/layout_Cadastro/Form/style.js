@@ -12,8 +12,9 @@ export const MainContainer = styled.div`
   @media (min-width: 360px) {
     height: 710px;
   }
+
   @media (min-width: 375px) {
-    background-color: #5ddd;
+    background-color: black;
   }
 
   @media (min-width: 425px) {
