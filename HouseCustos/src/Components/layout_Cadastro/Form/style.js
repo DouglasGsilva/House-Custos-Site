@@ -20,7 +20,7 @@ export const MainContainer = styled.div`
   }
 
   @media (min-width: 768px) {
-    height: 1200px;
+    height: 935px;
   }
 `;
 
@@ -41,6 +41,11 @@ export const LinkExit = styled.a`
   font-size: 30px;
 
   @media (min-width: 768px) {
+    width: 55px;
+    height: 55px;
+    font-size: 50px;
+    top: 20px;
+    left: 20px;
   }
 `;
 
@@ -50,7 +55,8 @@ export const Logo = styled.h1`
   text-align: center;
   margin-top: 60px;
 
-  @media (min-width: 360px) {
+  @media (min-width: 768px) {
+    font-size: 60px;
   }
 `;
 
@@ -66,6 +72,11 @@ export const FormCad = styled.form`
   padding-top: 10px;
   border-radius: 5px;
   margin-bottom: 25px;
+
+  @media (min-width: 768px) {
+    width: 400px;
+    height: 500px;
+  }
 `;
 
 export const FormCadTitle = styled.p`
@@ -73,6 +84,9 @@ export const FormCadTitle = styled.p`
   margin-bottom: -1px;
   font-size: 15px;
   margin-right: ${(props) => props.margin};
+  @media (min-width: 768px) {
+    font-size: 20px;
+  }
 `;
 
 export const Input = styled.input`
@@ -84,6 +98,11 @@ export const Input = styled.input`
   text-align: left;
   padding-left: 10px;
   font-size: 15px;
+
+  @media (min-width: 768px) {
+    width: 300px;
+    height: 40px;
+  }
 `;
 
 export const ButtonCad = styled.button`
@@ -100,6 +119,12 @@ export const ButtonCad = styled.button`
 
   &:hover {
     background-color: #2525df;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    width: 100px;
+    margin-top: 20px;
   }
 `;
 
