@@ -61,6 +61,7 @@ export const LinkRoutes = styled.p`
   margin-right: ${(props) => props.margin};
   font-size: 16px;
   transition: all 0.2s linear;
+  justify-content: center;
   &:hover {
     color: #fff;
   }

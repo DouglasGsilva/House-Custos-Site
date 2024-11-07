@@ -6,15 +6,7 @@ import { UserContext } from "../../../context/UserContext";
 import Cookies from "js-cookie";
 
 import logo from "../../imgs/em_desenvolvimento.png";
-import {
-  NavbarBg,
-  NavLinks,
-  NavLi,
-  LinkRouteCad,
-  LinkSignout,
-  NavLogo,
-  LinkRoutes,
-} from "./style";
+import * as C from "./style";
 import { RxExit } from "react-icons/rx";
 
 function NavBar() {
@@ -52,40 +44,40 @@ function NavBar() {
   }
 
   return (
-    <NavbarBg>
-      <NavLogo src={logo}></NavLogo>
-      <NavLinks>
+    <C.NavbarBg>
+      <C.NavLogo src={logo}></C.NavLogo>
+      <C.NavLinks>
         {!user ? (
-          <NavLi>
+          <C.NavLi>
             <Link to={"/cadastro"}>
-              <LinkRouteCad>Cadastre-se</LinkRouteCad>
+              <C.LinkRouteCad>Cadastre-se</C.LinkRouteCad>
             </Link>{" "}
-          </NavLi>
+          </C.NavLi>
         ) : (
           ""
         )}
 
         {user ? (
-          <NavLi>
-            <LinkRoutes margin='12px'>{user.name} </LinkRoutes>
+          <C.NavLi>
+            <C.LinkRoutes margin='12px'>{user.name} </C.LinkRoutes>
 
             <Link to={"/custos"}>
-              <LinkRoutes margin='30px'>Custos</LinkRoutes>
+              <C.LinkRoutes margin='30px'>Custos</C.LinkRoutes>
             </Link>
 
-            <LinkSignout>
+            <C.LinkSignout>
               <RxExit onClick={signOut} />
-            </LinkSignout>
-          </NavLi>
+            </C.LinkSignout>
+          </C.NavLi>
         ) : (
-          <NavLi>
+          <C.NavLi>
             <Link to={"/login"}>
-              <LinkRoutes>Entrar</LinkRoutes>
+              <C.LinkRoutes>Entrar</C.LinkRoutes>
             </Link>
-          </NavLi>
+          </C.NavLi>
         )}
-      </NavLinks>
-    </NavbarBg>
+      </C.NavLinks>
+    </C.NavbarBg>
   );
 }
 export default NavBar;

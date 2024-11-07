@@ -5,14 +5,8 @@ import signinSchema from "../../../Schemas/signinSchema";
 import { useNavigate, Link } from "react-router-dom";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import Cookies from "js-cookie";
-import {
-  ButtonLogin,
-  ContainerCenter,
-  FormLogin,
-  Input,
-  LinkExit,
-} from "./style";
-import { ErrorMessage } from "../../layout_Cadastro/Form/style.js";
+import * as C from "./style";
+import { IoMdAlert } from "react-icons/io";
 const Login = () => {
   const {
     register,
@@ -38,35 +32,43 @@ const Login = () => {
   }
 
   return (
-    <ContainerCenter>
+    <C.ContainerCenter>
       <Link to={"/"}>
-        <LinkExit>
+        <C.LinkExit>
           <IoMdArrowRoundBack />
-        </LinkExit>
+        </C.LinkExit>
       </Link>{" "}
-      <FormLogin onSubmit={handleSubmit(HandleSubmit)}>
-        <p>Faça seu login</p>
-        <Input
+      <C.FormLogin onSubmit={handleSubmit(HandleSubmit)}>
+        <C.TitleForm>Faça seu login</C.TitleForm>
+        <C.Input
           type='text'
           placeholder='Digite seu e-mail'
           {...register("email")}
         />
-        {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
-        <Input
+        {errors.email && (
+          <C.ErrorMessage>
+            <IoMdAlert />
+            {errors.email.message}
+          </C.ErrorMessage>
+        )}
+        <C.Input
           type='password'
           placeholder='Digite sua senha'
           {...register("password")}
         />
         {errors.password && (
-          <ErrorMessage>{errors.password.message}</ErrorMessage>
+          <C.ErrorMessage>
+            <IoMdAlert />
+            {errors.password.message}
+          </C.ErrorMessage>
         )}
-        <ButtonLogin>Entrar</ButtonLogin>
+        <C.ButtonLogin>Entrar</C.ButtonLogin>
 
-        <h4>
+        <C.TextDown>
           Não tem conta? <Link to={"/cadastro"}>Cadastre-se</Link>{" "}
-        </h4>
-      </FormLogin>
-    </ContainerCenter>
+        </C.TextDown>
+      </C.FormLogin>
+    </C.ContainerCenter>
   );
 };
 

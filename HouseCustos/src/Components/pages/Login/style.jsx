@@ -8,7 +8,7 @@ export const LinkExit = styled.a`
   padding: 5px;
   border-radius: 5px;
   top: 19px;
-  left: 40px;
+  left: 20px;
   width: 35px;
   height: 35px;
   display: flex;
@@ -19,6 +19,29 @@ export const LinkExit = styled.a`
   &:hover {
     color: #2525df;
   }
+
+  @media (min-width: 1024px) {
+    width: 50px;
+    height: 50px;
+    font-size: 40px;
+  }
+`;
+
+export const TitleForm = styled.p`
+  font-size: 30px;
+  margin-top: 0px;
+  @media (min-width: 768px) {
+    font-size: 50px;
+    margin-top: -50px;
+  }
+`;
+
+export const TextDown = styled.p`
+  font-size: 16px;
+  font-weight: bold;
+  @media (min-width: 768px) {
+    font-size: 25px;
+  }
 `;
 
 export const ContainerCenter = styled.div`
@@ -26,7 +49,18 @@ export const ContainerCenter = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 617px;
+  width: 100%;
+  height: 550px;
+
+  @media (min-width: 360px) {
+    height: 715px;
+  }
+  @media (min-width: 425px) {
+    height: 750px;
+  }
+  @media (min-width: 768px) {
+    height: 940px;
+  }
 `;
 
 export const FormLogin = styled.form`
@@ -37,11 +71,25 @@ export const FormLogin = styled.form`
   align-items: center;
   padding: 15px;
   border-radius: 5px;
-  width: 300px;
-  height: 400px;
+  width: 260px;
+  height: 350px;
 
-  & p {
-    font-size: 30px;
+  @media (min-width: 360px) {
+    width: 300px;
+    height: 400px;
+  }
+  @media (min-width: 425px) {
+    width: 350px;
+    height: 450px;
+  }
+
+  @media (min-width: 768px) {
+    height: 600px;
+    width: 500px;
+  }
+  @media (min-width: 1024px) {
+    height: 600px;
+    width: 450px;
   }
 `;
 
@@ -54,7 +102,25 @@ export const Input = styled.input`
   text-align: left;
   padding-left: 10px;
   font-size: 15px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+
+  @media (min-width: 360px) {
+    height: 40px;
+    margin-top: 10px;
+  }
+  @media (min-width: 425px) {
+    width: 300px;
+    height: 45px;
+    font-size: 17px;
+  }
+  @media (min-width: 768px) {
+    width: 400px;
+    height: 60px;
+    font-size: 22px;
+  }
+  @media (min-width: 1024px) {
+    height: 50px;
+  }
 `;
 
 export const ButtonLogin = styled.button`
@@ -68,4 +134,30 @@ export const ButtonLogin = styled.button`
   font-size: 14px;
   transition: all 0.2s linear;
   margin-top: 15px;
+
+  @media (min-width: 768px) {
+    font-size: 25px;
+    width: 100px;
+    height: 50px;
+  }
+`;
+
+export const ErrorMessage = styled.p`
+  color: red;
+  width: 400px;
+  height: 1px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 12px;
+  margin-top: -20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  @media (min-width: 360px) {
+    font-size: 14px;
+  }
+  @media (min-width: 768px) {
+    font-size: 20px;
+  }
 `;
