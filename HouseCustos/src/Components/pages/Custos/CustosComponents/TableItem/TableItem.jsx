@@ -5,7 +5,7 @@ export const TableItem = ({ item }) => {
   const category = categories[item.category];
 
   return (
-    <C.TableLine>
+    <>
       <C.TableColumn>{formatDate(item.date)}</C.TableColumn>
       <C.TableColumn>
         {category ? (
@@ -21,12 +21,12 @@ export const TableItem = ({ item }) => {
       <C.TableColumn>
         {category ? (
           <C.Value color={categories[item.category].expense ? "red" : "green"}>
-            R$ {item.value}
+            R${item.value}
           </C.Value>
         ) : (
           <C.Value color='gray'>{item.value}</C.Value>
         )}
       </C.TableColumn>
-    </C.TableLine>
+    </>
   );
 };

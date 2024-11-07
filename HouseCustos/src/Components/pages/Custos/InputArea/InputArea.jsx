@@ -37,7 +37,7 @@ export const InputArea = ({ onAdd }) => {
         />
       </C.InputLabel>
 
-      <C.InputLabel>
+      <C.InputLabel maxwidth='100px'>
         <C.InputTitle>Categoria</C.InputTitle>
         <C.Select
           value={categoryField}
@@ -71,6 +71,7 @@ export const InputArea = ({ onAdd }) => {
           value={valueField}
           step={"0.01"}
           onChange={(e) => setValueField(parseFloat(e.target.value))}
+          minwidth='120px'
         />
       </C.InputLabel>
 

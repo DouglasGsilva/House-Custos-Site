@@ -5,10 +5,10 @@ export const TableArea = ({ list }) => {
     <C.Table>
       <thead>
         <tr>
-          <C.TableHeadColumn width={100}>Data</C.TableHeadColumn>
-          <C.TableHeadColumn width={130}>Categoria</C.TableHeadColumn>
-          <C.TableHeadColumn>Titulo</C.TableHeadColumn>
-          <C.TableHeadColumn width={150}>Valor</C.TableHeadColumn>
+          <C.TableHeadColumn textalign='start'>Data</C.TableHeadColumn>
+          <C.TableHeadColumn textalign='center'>Categoria</C.TableHeadColumn>
+          <C.TableHeadColumn textalign='center'>Titulo</C.TableHeadColumn>
+          <C.TableHeadColumn textalign='center'>Valor</C.TableHeadColumn>
         </tr>
       </thead>
       <tbody>

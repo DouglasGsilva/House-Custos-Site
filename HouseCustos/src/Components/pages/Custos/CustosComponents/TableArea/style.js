@@ -11,5 +11,6 @@ export const Table = styled.table`
 
 export const TableHeadColumn = styled.th`
   padding: 10px 0px;
-  text-align: left;
+
+  text-align: ${(props) => props.textalign};
 `;
