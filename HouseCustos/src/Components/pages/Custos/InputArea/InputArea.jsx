@@ -5,7 +5,7 @@ import { newDateAjusted } from "../../../../helpers/dateFilter";
 export const InputArea = ({ onAdd }) => {
   let categoryKeys = Object.keys(categories);
   const [dateField, setDateField] = useState("");
-  const [categoryField, setCategoryField] = useState(categoryKeys);
+  const [categoryField, setCategoryField] = useState(categoryKeys[0]);
   const [titleField, setTitleField] = useState("");
   const [valueField, setValueField] = useState(0);
 
@@ -69,7 +69,6 @@ export const InputArea = ({ onAdd }) => {
         <C.Input
           type='number'
           value={valueField}
-          step={"0.01"}
           onChange={(e) => setValueField(parseFloat(e.target.value))}
           minwidth='120px'
         />

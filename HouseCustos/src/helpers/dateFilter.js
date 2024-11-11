@@ -55,6 +55,7 @@ export const formatCurrentMonth = (currentMonth) => {
     "Maio",
     "Junho",
     "Julho",
+    "Agosto",
     "Setembro",
     "Outubro",
     "Novembro",
@@ -66,5 +67,5 @@ export const formatCurrentMonth = (currentMonth) => {
 export const newDateAjusted = (dateField) => {
   let [year, month, day] = dateField.split("-");
 
-  return new Date(parseInt(year), parseInt(month) - 1, parseInt(day));
+  return new Date(parseInt(year), parseInt(month), parseInt(day));
 };
