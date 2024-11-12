@@ -9,8 +9,9 @@ import signupSchema from "../../../Schemas/signupSchema";
 import { signup } from "../../../services/userServices";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
+// import Loading from "../../imgs/loading.gif";
 
-const Form = () => {
+const FormContainer = () => {
   const {
     register,
     handleSubmit,
@@ -78,10 +79,11 @@ const Form = () => {
             {errors.confirmPassword.message}
           </C.ErrorMessage>
         )}
+
         <C.ButtonCad>Cadastrar</C.ButtonCad>
       </C.FormCad>
     </C.MainContainer>
   );
 };
 
-export default Form;
+export default FormContainer;

@@ -22,9 +22,12 @@ export const MainContainer = styled.div`
   @media (min-width: 768px) {
     height: 935px;
   }
+  @media (min-width: 1024px) {
+    height: 620px;
+  }
 `;
 
-export const LinkExit = styled.a`
+export const LinkExit = styled.div`
   position: absolute;
   margin: auto;
   cursor: pointer;
@@ -138,3 +141,5 @@ export const ErrorMessage = styled.p`
   text-align: center;
   font-size: 11px;
 `;
+
+export const Loading = styled.img``;

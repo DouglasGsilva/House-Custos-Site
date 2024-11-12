@@ -61,6 +61,9 @@ export const ContainerCenter = styled.div`
   @media (min-width: 768px) {
     height: 940px;
   }
+  @media (min-width: 1024px) {
+    height: 617px;
+  }
 `;
 
 export const FormLogin = styled.form`
@@ -88,7 +91,7 @@ export const FormLogin = styled.form`
     width: 500px;
   }
   @media (min-width: 1024px) {
-    height: 600px;
+    height: 500px;
     width: 450px;
   }
 `;
@@ -119,7 +122,8 @@ export const Input = styled.input`
     font-size: 22px;
   }
   @media (min-width: 1024px) {
-    height: 50px;
+    height: 40px;
+    width: 350px;
   }
 `;
 
