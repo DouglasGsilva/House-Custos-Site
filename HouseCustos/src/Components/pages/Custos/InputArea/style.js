@@ -11,6 +11,11 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   height: 265px;
+
+  @media (min-width: 768px) {
+    display: flex;
+    margin-top: -80px;
+  }
 `;
 
 export const InputLabel = styled.label`
@@ -20,8 +25,10 @@ export const InputLabel = styled.label`
 
 export const InputTitle = styled.div`
   font-weight: bold;
-
   text-align: center;
+  @media (min-width: 768px) {
+    font-size: 25px;
+  }
 `;
 
 export const Input = styled.input`
@@ -32,7 +39,9 @@ export const Input = styled.input`
   border-radius: 5px;
   max-width: ${(props) => props.minwidth};
 
-  @media (min-width: 360px) {
+  @media (min-width: 768px) {
+    font-size: 20px;
+    height: 35px;
   }
 `;
 
@@ -45,6 +54,11 @@ export const Select = styled.select`
 
   & option {
     font-size: 10px;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    height: 35px;
   }
 `;
 
@@ -65,6 +79,11 @@ export const Button = styled.button`
     background-color: #3d3ddd;
     color: white;
     border: none;
+  }
+
+  @media (min-width: 768px) {
+    margin-left: auto;
+    margin-bottom: auto;
   }
 `;
 

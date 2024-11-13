@@ -21,8 +21,8 @@ export const LinkExit = styled.a`
   }
 
   @media (min-width: 1024px) {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     font-size: 40px;
   }
 `;
@@ -34,6 +34,9 @@ export const TitleForm = styled.p`
     font-size: 50px;
     margin-top: -50px;
   }
+  @media (min-width: 1024px) {
+    font-size: 30px;
+  }
 `;
 
 export const TextDown = styled.p`
@@ -41,6 +44,12 @@ export const TextDown = styled.p`
   font-weight: bold;
   @media (min-width: 768px) {
     font-size: 25px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 15px;
+    position: absolute;
+    left: 50px;
+    top: 380px;
   }
 `;
 
@@ -76,6 +85,7 @@ export const FormLogin = styled.form`
   border-radius: 5px;
   width: 260px;
   height: 350px;
+  position: relative;
 
   @media (min-width: 360px) {
     width: 300px;
@@ -91,8 +101,8 @@ export const FormLogin = styled.form`
     width: 500px;
   }
   @media (min-width: 1024px) {
-    height: 500px;
-    width: 450px;
+    height: 400px;
+    width: 300px;
   }
 `;
 
@@ -122,8 +132,9 @@ export const Input = styled.input`
     font-size: 22px;
   }
   @media (min-width: 1024px) {
-    height: 40px;
-    width: 350px;
+    height: 30px;
+    width: 250px;
+    font-size: 15px;
   }
 `;
 
@@ -138,11 +149,16 @@ export const ButtonLogin = styled.button`
   font-size: 14px;
   transition: all 0.2s linear;
   margin-top: 15px;
-
   @media (min-width: 768px) {
     font-size: 25px;
     width: 100px;
     height: 50px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 16px;
+    width: 60px;
+    height: 30px;
+    padding: 10px auto;
   }
 `;
 
@@ -163,5 +179,23 @@ export const ErrorMessage = styled.p`
   }
   @media (min-width: 768px) {
     font-size: 20px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 14px;
+  }
+`;
+
+export const loading = styled.img`
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 80px;
+  height: 40px;
+
+  @media (min-width: 1024px) {
+    width: 50px;
+    height: 30px;
+    display: flex;
+    margin: auto;
   }
 `;

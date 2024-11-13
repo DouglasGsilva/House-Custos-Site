@@ -24,6 +24,8 @@ export const MainContainer = styled.div`
   }
   @media (min-width: 1024px) {
     height: 620px;
+    display: flex;
+    flex-direction: row;
   }
 `;
 
@@ -50,6 +52,12 @@ export const LinkExit = styled.div`
     top: 20px;
     left: 20px;
   }
+
+  @media (min-width: 1024px) {
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+  }
 `;
 
 export const Logo = styled.h1`
@@ -60,6 +68,13 @@ export const Logo = styled.h1`
 
   @media (min-width: 768px) {
     font-size: 60px;
+  }
+  @media (min-width: 1024px) {
+    justify-content: space-between;
+    max-width: 200px;
+    margin-right: 200px;
+    font-size: 80px;
+    text-align: center;
   }
 `;
 
@@ -80,6 +95,11 @@ export const FormCad = styled.form`
     width: 400px;
     height: 500px;
   }
+
+  @media (min-width: 1024px) {
+    width: 290px;
+    height: 100%;
+  }
 `;
 
 export const FormCadTitle = styled.p`
@@ -89,6 +109,11 @@ export const FormCadTitle = styled.p`
   margin-right: ${(props) => props.margin};
   @media (min-width: 768px) {
     font-size: 20px;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 15px;
+    margin-right: ${(props) => props.marginlaptop};
   }
 `;
 
@@ -105,6 +130,11 @@ export const Input = styled.input`
   @media (min-width: 768px) {
     width: 300px;
     height: 40px;
+  }
+
+  @media (min-width: 1024px) {
+    width: 200px;
+    height: 25px;
   }
 `;
 
@@ -128,6 +158,12 @@ export const ButtonCad = styled.button`
     font-size: 20px;
     width: 100px;
     margin-top: 20px;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 15px;
+    width: 80px;
+    height: 30px;
   }
 `;
 

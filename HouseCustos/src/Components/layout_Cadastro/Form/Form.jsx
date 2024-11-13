@@ -42,7 +42,9 @@ const FormContainer = () => {
       </Link>{" "}
       <C.Logo>House Custos</C.Logo>
       <C.FormCad onSubmit={handleSubmit(HandleSubmit)}>
-        <C.FormCadTitle margin='140px'>Digite seu nome:</C.FormCadTitle>
+        <C.FormCadTitle margin='140px' marginlaptop='100px'>
+          Digite seu nome:
+        </C.FormCadTitle>
         <C.Input type='text' {...register("name")} />
 
         {errors.name && (
@@ -52,7 +54,9 @@ const FormContainer = () => {
           </C.ErrorMessage>
         )}
 
-        <C.FormCadTitle margin='140px'>Digite seu email:</C.FormCadTitle>
+        <C.FormCadTitle margin='140px' marginlaptop='100px'>
+          Digite seu email:
+        </C.FormCadTitle>
         <C.Input type='email' {...register("email")} />
 
         {errors.email && (
@@ -62,7 +66,9 @@ const FormContainer = () => {
           </C.ErrorMessage>
         )}
 
-        <C.FormCadTitle margin='140px'>Digite sua senha:</C.FormCadTitle>
+        <C.FormCadTitle margin='140px' marginlaptop='100px'>
+          Digite sua senha:
+        </C.FormCadTitle>
         <C.Input type='password' {...register("password")} />
 
         {errors.password && (
@@ -71,7 +77,9 @@ const FormContainer = () => {
             {errors.password.message}
           </C.ErrorMessage>
         )}
-        <C.FormCadTitle margin='120px'>Confirme sua senha:</C.FormCadTitle>
+        <C.FormCadTitle margin='120px' marginlaptop='70px'>
+          Confirme sua senha:
+        </C.FormCadTitle>
         <C.Input type='password' {...register("confirmPassword")} />
         {errors.confirmPassword && (
           <C.ErrorMessage>

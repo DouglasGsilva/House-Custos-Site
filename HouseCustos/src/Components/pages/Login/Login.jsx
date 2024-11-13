@@ -7,7 +7,11 @@ import { IoMdArrowRoundBack } from "react-icons/io";
 import Cookies from "js-cookie";
 import * as C from "./style";
 import { IoMdAlert } from "react-icons/io";
+import { useState } from "react";
+import loadingGif from "../../imgs/loading.gif";
 const Login = () => {
+  const [disable, setDisable] = useState("");
+
   const {
     register,
     handleSubmit,
@@ -31,6 +35,10 @@ const Login = () => {
     }
   }
 
+  function handleClick() {
+    setDisable(true);
+  }
+
   return (
     <C.ContainerCenter>
       <Link to={"/"}>
@@ -38,6 +46,7 @@ const Login = () => {
           <IoMdArrowRoundBack />
         </C.LinkExit>
       </Link>{" "}
+      {}
       <C.FormLogin onSubmit={handleSubmit(HandleSubmit)}>
         <C.TitleForm>Faça seu login</C.TitleForm>
         <C.Input
@@ -62,7 +71,13 @@ const Login = () => {
             {errors.password.message}
           </C.ErrorMessage>
         )}
-        <C.ButtonLogin>Entrar</C.ButtonLogin>
+        {disable == true ? (
+          <C.ButtonLogin onClick={handleClick}>
+            <C.loading src={loadingGif} />
+          </C.ButtonLogin>
+        ) : (
+          <C.ButtonLogin onClick={handleClick}>Entrar</C.ButtonLogin>
+        )}
 
         <C.TextDown>
           Não tem conta? <Link to={"/cadastro"}>Cadastre-se</Link>{" "}
