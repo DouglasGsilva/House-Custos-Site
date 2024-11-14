@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const TableColumn = styled.td``;
+export const TableColumn = styled.td`
+  max-width: 320px;
+`;
 
 export const Category = styled.div`
   display: inline-block;

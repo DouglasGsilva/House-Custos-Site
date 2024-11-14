@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import * as C from "./style";
 import { IoMdAlert } from "react-icons/io";
 import { IoMdArrowRoundBack } from "react-icons/io";
@@ -9,9 +9,10 @@ import signupSchema from "../../../Schemas/signupSchema";
 import { signup } from "../../../services/userServices";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
-// import Loading from "../../imgs/loading.gif";
-
+import loadingGif from "../../imgs/loading.gif";
 const FormContainer = () => {
+  const [loading, setLoading] = useState(false);
+
   const {
     register,
     handleSubmit,
@@ -23,6 +24,7 @@ const FormContainer = () => {
   const navigate = useNavigate();
 
   async function HandleSubmit(data) {
+    setLoading(true);
     try {
       const response = await signup(data);
       console.log(response);
@@ -30,6 +32,8 @@ const FormContainer = () => {
       navigate("/");
     } catch (error) {
       console.log(error);
+    } finally {
+      setLoading(false);
     }
   }
 
@@ -88,7 +92,9 @@ const FormContainer = () => {
           </C.ErrorMessage>
         )}
 
-        <C.ButtonCad>Cadastrar</C.ButtonCad>
+        <C.ButtonCad disabled={loading}>
+          {loading ? <C.Loading src={loadingGif} /> : "Cadastrar"}
+        </C.ButtonCad>
       </C.FormCad>
     </C.MainContainer>
   );

@@ -10,7 +10,7 @@ import { IoMdAlert } from "react-icons/io";
 import { useState } from "react";
 import loadingGif from "../../imgs/loading.gif";
 const Login = () => {
-  const [disable, setDisable] = useState("");
+  const [disable, setDisable] = useState(false);
 
   const {
     register,
@@ -23,6 +23,7 @@ const Login = () => {
   const navigate = useNavigate();
 
   async function HandleSubmit(data) {
+    setDisable(true);
     try {
       const response = await signin(data);
       Cookies.set("token", response.data, { expires: 1 });
@@ -32,11 +33,9 @@ const Login = () => {
         "Error:",
         error.response ? error.response.data : error.message
       );
+    } finally {
+      setDisable(false);
     }
-  }
-
-  function handleClick() {
-    setDisable(true);
   }
 
   return (
@@ -71,13 +70,10 @@ const Login = () => {
             {errors.password.message}
           </C.ErrorMessage>
         )}
-        {disable == true ? (
-          <C.ButtonLogin onClick={handleClick}>
-            <C.loading src={loadingGif} />
-          </C.ButtonLogin>
-        ) : (
-          <C.ButtonLogin onClick={handleClick}>Entrar</C.ButtonLogin>
-        )}
+
+        <C.ButtonLogin disabled={disable}>
+          {disable ? <C.loading src={loadingGif} /> : "Entrar"}
+        </C.ButtonLogin>
 
         <C.TextDown>
           Não tem conta? <Link to={"/cadastro"}>Cadastre-se</Link>{" "}

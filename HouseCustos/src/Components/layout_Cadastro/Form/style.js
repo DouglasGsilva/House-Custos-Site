@@ -178,4 +178,10 @@ export const ErrorMessage = styled.p`
   font-size: 11px;
 `;
 
-export const Loading = styled.img``;
+export const Loading = styled.img`
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 60px;
+  height: 30px;
+`;

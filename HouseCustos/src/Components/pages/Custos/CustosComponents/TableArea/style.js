@@ -1,16 +1,22 @@
 import styled from "styled-components";
 
 export const Table = styled.table`
-  width: 100%;
-  background-color: aliceblue;
-  padding: 20px;
+  background-color: green;
   box-shadow: 0px 0px 5px #ccc;
   border-radius: 10px;
   margin-top: 20px;
+  height: 100%;
+  padding: 0%;
+  margin: auto;
+  & thead {
+  }
+
+  & tbody {
+  }
 `;
 
 export const TableHeadColumn = styled.th`
-  padding: 10px 0px;
+  padding: 0px 0px;
 
   text-align: ${(props) => props.textalign};
 `;
