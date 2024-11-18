@@ -13,4 +13,7 @@ export const Table = styled.table`
 export const TableHeadColumn = styled.th`
   width: 320px;
   text-align: center;
+  @media (min-width: 1024px) {
+    font-size: 25px;
+  }
 `;

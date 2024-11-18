@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const ContainerColumn = styled.div`
   display: flex;
   justify-content: center;
+  flex-direction: row;
 `;
 
 export const TableColumn = styled.td`
