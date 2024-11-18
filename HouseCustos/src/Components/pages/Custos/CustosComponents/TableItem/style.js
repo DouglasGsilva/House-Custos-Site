@@ -1,7 +1,13 @@
 import styled from "styled-components";
 
+export const ContainerColumn = styled.div`
+  display: flex;
+  justify-content: center;
+  background-color: yellow;
+`;
+
 export const TableColumn = styled.td`
-  max-width: 320px;
+  margin: auto;
 `;
 
 export const Category = styled.div`
