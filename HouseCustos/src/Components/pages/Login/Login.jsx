@@ -2,16 +2,21 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { signin } from "../../../services/userServices";
 import signinSchema from "../../../Schemas/signinSchema";
+import { jwtDecode } from "jwt-decode";
 import { useNavigate, Link } from "react-router-dom";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import Cookies from "js-cookie";
 import * as C from "./style";
 import { IoMdAlert } from "react-icons/io";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import loadingGif from "../../imgs/loading.gif";
+import { UserContext } from "../../../context/UserContext";
+
 const Login = () => {
   const [disable, setDisable] = useState(false);
-
+  const { setUser } = useContext(UserContext);
+  const navigate = useNavigate();
+  // HOOK FORM
   const {
     register,
     handleSubmit,
@@ -19,15 +24,24 @@ const Login = () => {
   } = useForm({
     resolver: zodResolver(signinSchema),
   });
+  // ---------- --------- ---------- //
 
-  const navigate = useNavigate();
-
+  // SUBMIT DO LOGIN PARA SER DIRECIONADO PARA A PAGINA CUSTOS
   async function HandleSubmit(data) {
     setDisable(true);
     try {
       const response = await signin(data);
+
       Cookies.set("token", response.data, { expires: 1 });
-      navigate("/");
+
+      const decodeToken = jwtDecode(response.data);
+      console.log("token decodificado", decodeToken);
+
+      console.log("Nome do usuário:", decodedToken.name);
+
+      setUser({ name: decodedToken.name, id: decodedToken.id });
+
+      navigate("/custos");
     } catch (error) {
       console.log(
         "Error:",
@@ -37,6 +51,8 @@ const Login = () => {
       setDisable(false);
     }
   }
+
+  // --------------- ------------- //
 
   return (
     <C.ContainerCenter>

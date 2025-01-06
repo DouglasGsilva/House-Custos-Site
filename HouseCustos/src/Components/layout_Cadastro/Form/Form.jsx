@@ -29,7 +29,7 @@ const FormContainer = () => {
       const response = await signup(data);
       console.log(response);
       Cookies.set("token", response.data.token, { expires: 1 });
-      navigate("/");
+      navigate("/custos");
     } catch (error) {
       console.log(error);
     } finally {

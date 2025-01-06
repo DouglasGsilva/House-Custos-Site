@@ -13,13 +13,15 @@ import { UserContext } from "../../../context/UserContext.jsx";
 import { Link } from "react-router-dom";
 
 import { ImExit } from "react-icons/im";
+import Cookies from "js-cookie";
+
 const Custos = () => {
   const [list, setList] = useState(items);
   const [filteredList, setFilteredList] = useState([]);
   const [currentMonth, setCurrentMonth] = useState(getCurrentMonth());
   const [income, setIncome] = useState(0);
   const [expense, setExpense] = useState(0);
-  const { user, setUser } = useContext(UserContext);
+  const { user } = useContext(UserContext);
   useEffect(() => {
     setFilteredList(filterListByMonth(list, currentMonth));
   }, [list, currentMonth]);
@@ -50,6 +52,11 @@ const Custos = () => {
     setList(newList);
   };
 
+  const handleLogout = () => {
+    Cookies.remove("token");
+    setUser({}); // Limpa o contexto de usuário ao sair
+  };
+
   return (
     <>
       <C.Container>
@@ -58,7 +65,7 @@ const Custos = () => {
 
           <C.HeaderTitle>House Custos</C.HeaderTitle>
           <C.HeaderTitle>
-            <Link to={"/"}>
+            <Link to={"/"} onClick={handleLogout}>
               <ImExit />
             </Link>
           </C.HeaderTitle>
