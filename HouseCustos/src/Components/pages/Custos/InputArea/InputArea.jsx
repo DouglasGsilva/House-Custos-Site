@@ -1,7 +1,12 @@
-import { useState } from "react";
+// ESTILOS
 import * as C from "./style";
+// REACT HOOKS E REACT ROUTER DOM HOOKS
+import { useState } from "react";
+// SCHEMAS,SERVICES,CONTEXTS,HELPERS E DATA
 import { categories } from "../../../../data/categories";
 import { newDateAjusted } from "../../../../helpers/dateFilter";
+
+// FUNÇÃO PRINCIPAL PASSANDO UM PARAMETRO
 export const InputArea = ({ onAdd }) => {
   let categoryKeys = Object.keys(categories);
   const [dateField, setDateField] = useState("");
@@ -9,6 +14,7 @@ export const InputArea = ({ onAdd }) => {
   const [titleField, setTitleField] = useState("");
   const [valueField, setValueField] = useState(0);
 
+  // FUNÇÃO PARA ADICIONAR OS DADOS DO CUSTO UTILIZANDO O PARAMETRO
   const handleAddEvent = () => {
     onAdd({
       date: newDateAjusted(dateField),
@@ -19,6 +25,7 @@ export const InputArea = ({ onAdd }) => {
     clearFields();
   };
 
+  // FUNÇÃO  PARA LIMPAR OS DADOS ANTIGOS DO CUSTO
   const clearFields = () => {
     setDateField("");
     setCategoryField("");
@@ -26,6 +33,7 @@ export const InputArea = ({ onAdd }) => {
     setValueField(0);
   };
 
+  // RETORNO DA FUNÇÃO INPUTAREA CHAMANDO OS STATES COM OPERADOR TERNARIO PARA A CATEGORIA
   return (
     <C.Container>
       <C.InputLabel>

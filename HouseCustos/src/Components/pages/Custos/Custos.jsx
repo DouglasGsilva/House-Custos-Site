@@ -1,20 +1,25 @@
+// REACT HOOKS E REACT ROUTER DOM HOOKS
 import { useState, useEffect, useContext } from "react";
+import { Link } from "react-router-dom";
+// ESTILOS
 import * as C from "./style.jsx";
+import { ImExit } from "react-icons/im";
+// SCHEMAS,SERVICES,CONTEXTS,HELPERS E DATA
 import { items } from "../../../data/items.js";
 import { categories } from "../../../data/categories.js";
 import {
   filterListByMonth,
   getCurrentMonth,
 } from "../../../helpers/dateFilter.js";
+import { UserContext } from "../../../context/UserContext.jsx";
+// IMPORT DE COMPONENTES
 import { TableArea } from "./CustosComponents/TableArea/TableArea.jsx";
 import { InfoArea } from "./CustosComponents/InfoArea/InfoArea.jsx";
 import { InputArea } from "./InputArea/InputArea.jsx";
-import { UserContext } from "../../../context/UserContext.jsx";
-import { Link } from "react-router-dom";
-
-import { ImExit } from "react-icons/im";
+// JS COOKIES
 import Cookies from "js-cookie";
 
+// FUNÇÃO PRINCIPAL
 const Custos = () => {
   const [list, setList] = useState(items);
   const [filteredList, setFilteredList] = useState([]);
@@ -42,21 +47,25 @@ const Custos = () => {
     setExpense(expenseCount);
   }, [filteredList]);
 
+  // FUNÇÃO PARA MUDAR O MÊS
   const handleMonthChange = (newMonth) => {
     setCurrentMonth(newMonth);
   };
 
+  // FUNÇÃO PARA ADICIONAR O ITEM
   const handleAddItem = (item) => {
     let newList = [...list];
     newList.push(item);
     setList(newList);
   };
 
+  // FUNÇÃO PARA DESLOGAR O USUÁRIO
   const handleLogout = () => {
     Cookies.remove("token");
     setUser({}); // Limpa o contexto de usuário ao sair
   };
 
+  // RETORNO DA FUNÇÃO CUSTOS COM OPERADOR TERNÁRIO PARA O USER
   return (
     <>
       <C.Container>

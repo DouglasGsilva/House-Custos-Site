@@ -1,5 +1,7 @@
+// REACT HOOKS E REACT ROUTER DOM HOOKS
 import { Fragment } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+// IMPORT DE COMPONENTES
 import Home from "./Components/pages/Home/Home";
 import Custos from "./Components/pages/Custos/Custos";
 import Cadastro from "./Components/pages/Cadastro/Cadastro";

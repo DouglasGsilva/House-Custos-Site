@@ -1,9 +1,14 @@
+// ESTILOS
 import * as C from "./style";
 import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
+// SCHEMAS,SERVICES,CONTEXTS E HELPERS
 import { formatCurrentMonth } from "../../../../../helpers/dateFilter";
+// IMPORTAÇÃO DE COMPONENTE
 import { ResumeItem } from "../ResumeItem/ResumeItem";
 
+// FUNÇÃO PRINCIPAL PASSANDO QUATRO PARAMETROS
 export const InfoArea = ({ currentMonth, onMonthChange, income, expense }) => {
+  // FUNÇÃO PARA PASSAR O MÊS DE FORMA DECRESCENTE UTILIZANDO ALGUNS PARAMETROS
   const handlePrevMonth = () => {
     if (typeof currentMonth === "string" && currentMonth.includes("-")) {
       let [year, month] = currentMonth.split("-");
@@ -13,6 +18,7 @@ export const InfoArea = ({ currentMonth, onMonthChange, income, expense }) => {
       onMonthChange(`${currentDate.getFullYear()}-${newMonth}`);
     }
   };
+  // FUNÇÃO PARA PASSAR O MÊS DE FORMA CRESCENTE
   const handleNextMonth = () => {
     if (typeof currentMonth === "string" && currentMonth.includes("-")) {
       let [year, month] = currentMonth.split("-");
@@ -23,6 +29,7 @@ export const InfoArea = ({ currentMonth, onMonthChange, income, expense }) => {
     }
   };
 
+  // RETORNO DO COMPONENTE DO INFOAREA
   return (
     <C.Container>
       <C.MonthArea>

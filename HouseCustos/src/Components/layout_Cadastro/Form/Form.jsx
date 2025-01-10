@@ -1,18 +1,27 @@
-import React, { useState } from "react";
+// REACT HOOKS E REACT ROUTER DOM HOOKS
+import React, { useContext, useState } from "react";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+// ESTILOS
 import * as C from "./style";
 import { IoMdAlert } from "react-icons/io";
 import { IoMdArrowRoundBack } from "react-icons/io";
-import { Link } from "react-router-dom";
+import loadingGif from "../../imgs/loading.gif";
+// HOOK FORM
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+// SCHEMAS,SERVICES,CONTEXTS,HELPERS E DATA
 import signupSchema from "../../../Schemas/signupSchema";
 import { signup } from "../../../services/userServices";
+import { UserContext } from "../../../context/UserContext";
+// JS COOKIES
 import Cookies from "js-cookie";
-import { useNavigate } from "react-router-dom";
-import loadingGif from "../../imgs/loading.gif";
+
+// FUNÇÃO PRINCIPAL
 const FormContainer = () => {
   const [loading, setLoading] = useState(false);
-
+  const navigate = useNavigate();
+  const { setUser } = useContext(UserContext);
   const {
     register,
     handleSubmit,
@@ -21,14 +30,15 @@ const FormContainer = () => {
     resolver: zodResolver(signupSchema),
   });
 
-  const navigate = useNavigate();
-
+  // ENVIO DE CADASTRO
   async function HandleSubmit(data) {
     setLoading(true);
+
     try {
       const response = await signup(data);
       console.log(response);
       Cookies.set("token", response.data.token, { expires: 1 });
+      setUser({ name: data.name });
       navigate("/custos");
     } catch (error) {
       console.log(error);
@@ -36,7 +46,7 @@ const FormContainer = () => {
       setLoading(false);
     }
   }
-
+  // RETORNO DO FORMULÁRIO DO CADASTRO
   return (
     <C.MainContainer>
       <Link to={"/"}>

@@ -1,17 +1,22 @@
+// REACT HOOKS E REACT ROUTER DOM HOOKS
+import { useNavigate, Link } from "react-router-dom";
+import { useContext, useState } from "react";
+// ESTILOS
+import { IoMdAlert } from "react-icons/io";
+import * as C from "./style";
+import { IoMdArrowRoundBack } from "react-icons/io";
+import loadingGif from "../../imgs/loading.gif";
+// HOOK FORM
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { signin } from "../../../services/userServices";
+// SCHEMAS,SERVICES,CONTEXTS,HELPERS E DATA
+import { getUserDetails, signin } from "../../../services/userServices";
 import signinSchema from "../../../Schemas/signinSchema";
-import { jwtDecode } from "jwt-decode";
-import { useNavigate, Link } from "react-router-dom";
-import { IoMdArrowRoundBack } from "react-icons/io";
-import Cookies from "js-cookie";
-import * as C from "./style";
-import { IoMdAlert } from "react-icons/io";
-import { useContext, useState } from "react";
-import loadingGif from "../../imgs/loading.gif";
 import { UserContext } from "../../../context/UserContext";
+// JS COOKIES
+import Cookies from "js-cookie";
 
+// FUNÇÃO PRINCIPAL
 const Login = () => {
   const [disable, setDisable] = useState(false);
   const { setUser } = useContext(UserContext);
@@ -24,9 +29,8 @@ const Login = () => {
   } = useForm({
     resolver: zodResolver(signinSchema),
   });
-  // ---------- --------- ---------- //
 
-  // SUBMIT DO LOGIN PARA SER DIRECIONADO PARA A PAGINA CUSTOS
+  // FUNÇÃO DE LOGIN PARA SER DIRECIONADO PARA A PAGINA CUSTOS
   async function HandleSubmit(data) {
     setDisable(true);
     try {
@@ -34,12 +38,9 @@ const Login = () => {
 
       Cookies.set("token", response.data, { expires: 1 });
 
-      const decodeToken = jwtDecode(response.data);
-      console.log("token decodificado", decodeToken);
+      const userResponse = await getUserDetails(response.data);
 
-      console.log("Nome do usuário:", decodedToken.name);
-
-      setUser({ name: decodedToken.name, id: decodedToken.id });
+      setUser({ name: userResponse.data.name });
 
       navigate("/custos");
     } catch (error) {
@@ -52,8 +53,7 @@ const Login = () => {
     }
   }
 
-  // --------------- ------------- //
-
+  // RETORNO DA FUNÇÃO COM OPERADORES TERNARIOS PARA ERRO DE DIGITAÇÃO E DESATIVAÇÃO DE LOADING
   return (
     <C.ContainerCenter>
       <Link to={"/"}>

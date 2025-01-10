@@ -1,5 +1,6 @@
+// REACT HOOKS E REACT ROUTER DOM HOOKS
 import { useLayoutEffect } from "react";
-
+// ESTILOS
 import "./MoreInfo.css";
 import imgFile from "../../imgs/icone-pasta.png";
 import imgEngine from "../../imgs/icone-engine.png";
@@ -8,7 +9,9 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import * as C from "./style";
 
+// FUNÇÃO PRINCIPAL
 const MoreInfo = () => {
+  // ADIÇÃO DE ANIMAÇÃO DO GSAP(LIBRARY DE ANIMAÇÃO)
   gsap.registerPlugin(ScrollTrigger);
   useLayoutEffect(() => {
     gsap.to(".content-first", {
@@ -42,7 +45,7 @@ const MoreInfo = () => {
         },
       });
   });
-
+  // RETORNO DOS COMPONENTES DO MOREINFO
   return (
     <>
       <C.AreaContent>

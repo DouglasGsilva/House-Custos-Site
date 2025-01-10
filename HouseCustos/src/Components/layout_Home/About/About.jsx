@@ -1,6 +1,10 @@
+// ESTILOS
 import * as C from "./style";
 import ImageWoman from "../../imgs/image-Woman2.jpg";
+
+// FUNÇÃO PRINCIPAL
 function About() {
+  // RETORNO DOS COMPONENTES DO ABOUT
   return (
     <>
       <C.AboutContainer>

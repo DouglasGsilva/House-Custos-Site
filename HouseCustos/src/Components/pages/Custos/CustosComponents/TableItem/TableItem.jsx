@@ -1,9 +1,13 @@
+// ESTILOS
 import * as C from "./style";
+// SCHEMAS,SERVICES,CONTEXTS,HELPERS E DATA
 import { formatDate } from "../../../../../helpers/dateFilter";
 import { categories } from "../../../../../data/categories";
+
+// FUNÇÃO PRINCIPAL PASSANDO UM PARAMETRO
 export const TableItem = ({ item }) => {
   const category = categories[item.category];
-
+  // RETORNO DA FUNÇÃO TABLEITEM COM OPERADOR TERNÁRIO PARA A CATEGORIA E PASSANDO DADOS COM O PARAMETRO
   return (
     <>
       <C.ContainerColumn>

@@ -1,9 +1,11 @@
 import axios from "axios";
 import Cookies from "js-cookie";
 
+// URL PRINCIPAL DA API
 const baseURL = "https://api-housecustos.onrender.com";
-//
-// http://localhost:3001
+// ROTA LOCALHOST PARA TESTES  http://localhost:3001
+
+// REQUISIÇÃO DE CADASTRO
 export const signup = (data) => {
   const body = {
     ...data,
@@ -14,6 +16,7 @@ export const signup = (data) => {
   return response;
 };
 
+// REQUISIÇÃO DE LOGIN
 export const signin = async (data) => {
   try {
     const response = await axios.post(`${baseURL}/auth/login`, data);
@@ -24,6 +27,7 @@ export const signin = async (data) => {
   }
 };
 
+// REQUISIÇÃO DE USUÁRIO LOGADO PARA ADIÇÃO DE TOKEN
 export const userLogged = () => {
   const response = axios.get(`${baseURL}/user/findById`, {
     headers: {
@@ -31,4 +35,19 @@ export const userLogged = () => {
     },
   });
   return response;
+};
+
+// REQUISIÇÃO DE RETORNO DE DADOS DO USUÁRIO
+export const getUserDetails = async (token) => {
+  try {
+    const response = axios.get(`${baseURL}/user/findById`, {
+      headers: {
+        Authorization: `Bearer ${Cookies.get("token")}`,
+      },
+    });
+    return response;
+  } catch (error) {
+    console.error("Erro ao obter os dados do usuário", error);
+    throw error;
+  }
 };

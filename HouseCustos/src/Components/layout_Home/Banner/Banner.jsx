@@ -1,7 +1,12 @@
+// REACT HOOKS/REACT ROUTER DOM HOOKS
 import { Link } from "react-router-dom";
+// ESTILOS
 import img from "../../imgs/background-certo.jpg";
 import { BannerContent, BannerButton, BannerImg } from "./style";
+
+// FUNÇÃO PRINCIPAL
 function Banner() {
+  // RETORNO DOS COMPONENTES DO BANNER
   return (
     <>
       <BannerImg src={img} />

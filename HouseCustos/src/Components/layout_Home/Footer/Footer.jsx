@@ -1,10 +1,13 @@
+// ESTILOS
 import * as C from "./style";
 import facebook from "../../imgs/facebook.png";
 import instagram from "../../imgs/instagram.png";
 import linkedin from "../../imgs/linkedin.png";
 import { FaArrowAltCircleUp } from "react-icons/fa";
 
+// FUNÇÃO PRINCIPAL
 function Footer() {
+  // RETORNO DOS COMPONENTES DO FOOTER
   return (
     <>
       <C.FooterMain>

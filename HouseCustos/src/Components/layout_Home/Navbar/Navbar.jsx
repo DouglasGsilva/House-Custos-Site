@@ -1,14 +1,18 @@
-import { Link } from "react-router-dom";
-import { signup, userLogged } from "../../../services/userServices";
+// REACT HOOKS E REACT ROUTER DOM HOOKS
 import { useContext, useEffect, useState } from "react";
-import { UserContext } from "../../../context/UserContext";
-
-import Cookies from "js-cookie";
-
+C;
+import { Link } from "react-router-dom";
+// ESTILOS
 import logo from "../../imgs/em_desenvolvimento.png";
 import * as C from "./style";
 import { RxExit } from "react-icons/rx";
+// SCHEMAS,SERVICES E CONTEXTS
+import { signup, userLogged } from "../../../services/userServices";
+import { UserContext } from "../../../context/UserContext";
+// JS COOKIES
+import Cookies from "js-cookie";
 
+// FUNÇÃO PRINCIPAL
 function NavBar() {
   const { user, setUser } = useContext(UserContext);
   const [loading, setLoading] = useState(true);
@@ -23,13 +27,14 @@ function NavBar() {
       setLoading(false);
     }
   };
-
+  // FUNÇÃO DE DESLOGAR
   function signOut() {
     Cookies.remove("token");
     Cookies.remove("userName");
-    setUser(undefined);
+    setUser({});
   }
 
+  // USEEFFECT PARA RESOLVER O PROBLEMA DE REFRESH ESTÁTICO DA PÁGINA HOME
   useEffect(() => {
     if (Cookies.get("token")) {
       findUserLogged();
@@ -43,6 +48,7 @@ function NavBar() {
     return null;
   }
 
+  // RETORNO DOS COMPONENTES DA BARRA DE NAVEGAÇÃO E OPERADOR TERNÁRIO PARA O USUÁRIO
   return (
     <C.NavbarBg>
       <C.NavLogo src={logo}></C.NavLogo>

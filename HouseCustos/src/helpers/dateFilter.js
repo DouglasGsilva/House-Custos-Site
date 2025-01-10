@@ -1,8 +1,10 @@
+// FUNÇÃO PARA PEGAR O MÊS ATUAL
 export const getCurrentMonth = () => {
   let now = new Date();
   return `${now.getFullYear()}-${now.getMonth() + 1}`;
 };
 
+// FUNÇÃO PARA FILTRAR A LISTA PELO MÊS
 export const filterListByMonth = (itemsList, date) => {
   let year, month;
 
@@ -27,6 +29,7 @@ export const filterListByMonth = (itemsList, date) => {
   return newList;
 };
 
+// FUNÇÃO PARA FORMATAR A DATA
 export const formatDate = (date) => {
   let year, month, day;
 
@@ -42,9 +45,10 @@ export const formatDate = (date) => {
 
   return `${addZeroToDate(day)}/${addZeroToDate(month)}/${year}`;
 };
-
+// CONSTANTE DE ADIÇÃO DE ZERO NA DATA
 const addZeroToDate = (n) => (n < 10 ? `0${n}` : `${n}`);
 
+// FUNÇÃO PARA FORMATAR O MÊS ATUAL
 export const formatCurrentMonth = (currentMonth) => {
   let [year, month] = currentMonth.split("-");
   let months = [
@@ -64,6 +68,7 @@ export const formatCurrentMonth = (currentMonth) => {
   return `${months[parseInt(month) - 1]} de ${year}`;
 };
 
+// FUNÇÃO PARA AJUSTAR A NOVA DATA
 export const newDateAjusted = (dateField) => {
   let [year, month, day] = dateField.split("-");
 

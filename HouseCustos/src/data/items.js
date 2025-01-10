@@ -1,3 +1,4 @@
+// FUNÇÃO COM OBJETOS DE ITEMS JA ADICIONADOS
 export const items = [
   {
     date: new Date(2024, 9, 6),

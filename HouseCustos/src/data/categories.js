@@ -1,3 +1,4 @@
+// FUNÇÃO COM OBJETOS DAS CATEGORIAS
 export const categories = {
   food: {
     title: "Alimentação",
