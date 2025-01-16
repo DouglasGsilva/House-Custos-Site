@@ -77,7 +77,11 @@ export const InputArea = ({ onAdd }) => {
         <C.Input
           type='number'
           value={valueField}
-          onChange={(e) => setValueField(parseFloat(e.target.value))}
+          onChange={(e) =>
+            setValueField(
+              e.target.value === "" ? "" : parseFloat(e.target.value)
+            )
+          }
           minwidth='120px'
         />
       </C.InputLabel>

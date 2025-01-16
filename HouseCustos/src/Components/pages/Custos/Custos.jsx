@@ -60,10 +60,7 @@ const Custos = () => {
   };
 
   // FUNÇÃO PARA DESLOGAR O USUÁRIO
-  const handleLogout = () => {
-    Cookies.remove("token");
-    setUser({}); // Limpa o contexto de usuário ao sair
-  };
+  const handleLogout = () => {};
 
   // RETORNO DA FUNÇÃO CUSTOS COM OPERADOR TERNÁRIO PARA O USER
   return (

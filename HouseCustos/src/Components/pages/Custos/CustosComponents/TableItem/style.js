@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 export const ContainerColumn = styled.div`
   display: flex;
-  justify-content: center;
-  flex-direction: row;
+  justify-content: end;
 `;
 
 export const TableColumn = styled.td`
   margin: auto;
+  text-align: start;
 `;
 
 export const Category = styled.div`

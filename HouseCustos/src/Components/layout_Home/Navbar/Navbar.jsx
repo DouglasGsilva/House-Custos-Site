@@ -30,8 +30,7 @@ function NavBar() {
   // FUNÇÃO DE DESLOGAR
   function signOut() {
     Cookies.remove("token");
-    Cookies.remove("userName");
-    setUser({});
+    setUser(false);
   }
 
   // USEEFFECT PARA RESOLVER O PROBLEMA DE REFRESH ESTÁTICO DA PÁGINA HOME
@@ -65,8 +64,6 @@ function NavBar() {
 
         {user ? (
           <C.NavLi>
-            <C.LinkRoutes margin='12px'>{user.name} </C.LinkRoutes>
-
             <Link to={"/custos"}>
               <C.LinkRoutes margin='30px'>Custos</C.LinkRoutes>
             </Link>
