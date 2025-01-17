@@ -33,7 +33,7 @@ export const Rodape = styled.p`
   margin-top: 30px;
 
   @media (min-width: 768px) {
-    font-size: 25px;
+    font-size: 18px;
   }
 `;
 export const Container = styled.div`
@@ -64,13 +64,6 @@ export const RedeSocial = styled.img`
 export const Text = styled.p`
   font-size: 13px;
   @media (min-width: 768px) {
-    font-size: 25px;
-  }
-`;
-
-export const logo = styled.div`
-  font-size: 30px;
-  @media (min-width: 768px) {
-    font-size: 50px;
+    font-size: 20px;
   }
 `;

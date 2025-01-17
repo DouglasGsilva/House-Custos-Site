@@ -3,7 +3,7 @@ import * as C from "./style";
 import facebook from "../../imgs/facebook.png";
 import instagram from "../../imgs/instagram.png";
 import linkedin from "../../imgs/linkedin.png";
-import { FaArrowAltCircleUp } from "react-icons/fa";
+import { ScrollToTopButton } from "../ScrollToTopButton/ScrollToTopButton";
 
 // FUNÇÃO PRINCIPAL
 function Footer() {
@@ -22,12 +22,10 @@ function Footer() {
           </C.ContentNetwork>
           <C.ContentToTop>
             <C.Text>Voltar ao topo</C.Text>
-            <C.logo>
-              <FaArrowAltCircleUp />
-            </C.logo>
+            <ScrollToTopButton />
           </C.ContentToTop>
         </C.Container>
-        <C.Rodape>DouglasCorp LTDA</C.Rodape>
+        <C.Rodape>DouglasCorp LTDA Todos os direitos reservados.</C.Rodape>
       </C.FooterMain>
     </>
   );

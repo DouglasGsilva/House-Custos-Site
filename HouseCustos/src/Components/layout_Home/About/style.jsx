@@ -8,6 +8,10 @@ export const AboutContainer = styled.div`
   display: grid;
   justify-content: center;
   align-items: center;
+
+  & a {
+    display: flex;
+  }
 `;
 
 export const Text = styled.p`
@@ -18,7 +22,7 @@ export const Text = styled.p`
   margin-right: 15px;
 
   @media (min-width: 768px) {
-    font-size: 24px;
+    font-size: 20px;
     margin-left: 25px;
     margin-right: 25px;
     margin-top: 40px;
